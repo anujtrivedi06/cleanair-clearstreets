@@ -8,6 +8,7 @@ Run in CI: see .github/workflows/update-data.yml
 import json
 import shutil
 
+import append_history
 import fetch_cpcb
 import fetch_firms
 import fetch_weather
@@ -46,6 +47,11 @@ def main():
         fetch_weather.main()
     except Exception as e:
         print(f"[warn] Weather fetch failed, continuing: {e}")
+
+    try:
+        append_history.append_all()
+    except Exception as e:
+        print(f"[warn] History append failed, continuing: {e}")
 
     hotspots = fuse_hotspots.fuse()
     predict_spike.main()

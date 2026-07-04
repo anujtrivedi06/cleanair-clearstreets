@@ -8,8 +8,7 @@
       "aqi": 143.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.143,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.143
     },
     {
       "zone_id": "rk_puram",
@@ -19,8 +18,7 @@
       "aqi": 131.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.131,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.131
     },
     {
       "zone_id": "punjabi_bagh",
@@ -30,8 +28,7 @@
       "aqi": 98.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.099,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.099
     },
     {
       "zone_id": "ito",
@@ -41,8 +38,7 @@
       "aqi": 101.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.102,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.102
     },
     {
       "zone_id": "dwarka",
@@ -52,8 +48,7 @@
       "aqi": 119.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.119,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.119
     },
     {
       "zone_id": "rohini",
@@ -63,8 +58,7 @@
       "aqi": 137.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.138,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.138
     },
     {
       "zone_id": "okhla",
@@ -74,8 +68,7 @@
       "aqi": 116.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.116,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.116
     },
     {
       "zone_id": "wazirpur",
@@ -85,8 +78,7 @@
       "aqi": 117.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.117,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.117
     },
     {
       "zone_id": "vivek_vihar",
@@ -96,8 +88,7 @@
       "aqi": 94.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.095,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.095
     },
     {
       "zone_id": "noida_sec62",
@@ -107,8 +98,7 @@
       "aqi": 91.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.091,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.091
     },
     {
       "zone_id": "gurugram_sec51",
@@ -118,8 +108,7 @@
       "aqi": 205.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.205,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.205
     },
     {
       "zone_id": "ghaziabad_sanjay_nagar",
@@ -129,8 +118,7 @@
       "aqi": 118.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.118,
-      "predicted_aqi_24h": null
+      "hotspot_score": 0.118
     }
   ]
 }
