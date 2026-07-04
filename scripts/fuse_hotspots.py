@@ -30,10 +30,11 @@ def load_firms_csv(path: Path):
         return list(csv.DictReader(f))
 
 
-def normalize_aqi(aqi_value):
-    # CPCB AQI scale: 0-500. Clamp and scale to 0-1.
+def normalize_pm_proxy(pm_avg_value):
+    # PM2.5/PM10 average used as an AQI-scale (0-500) severity proxy -- see
+    # fetch_cpcb.py docstring for why we don't compute the official sub-index.
     try:
-        return min(max(float(aqi_value), 0), 500) / 500
+        return min(max(float(pm_avg_value), 0), 500) / 500
     except (TypeError, ValueError):
         return 0.0
 
@@ -61,13 +62,13 @@ def fuse():
     hotspots = []
     for zone in zones:
         cpcb = cpcb_by_station.get(zone["cpcb_station"], {})
-        aqi_score = normalize_aqi(cpcb.get("pollutant_avg") or cpcb.get("aqi"))
+        pm_score = normalize_pm_proxy(cpcb.get("pollutant_avg"))
         firms_count = nearest_zone_firms_count(zone, firms_rows)
         firms_score = min(firms_count / 5, 1.0)  # 5+ detections = max score
         photo_score = photo_scores.get(zone["id"], {}).get("severity", 0.0)
 
         hotspot_score = (
-            AQI_WEIGHT * aqi_score + FIRMS_WEIGHT * firms_score + PHOTO_WEIGHT * photo_score
+            AQI_WEIGHT * pm_score + FIRMS_WEIGHT * firms_score + PHOTO_WEIGHT * photo_score
         )
 
         hotspots.append(
@@ -76,7 +77,7 @@ def fuse():
                 "name": zone["name"],
                 "lat": zone["lat"],
                 "lon": zone["lon"],
-                "aqi": cpcb.get("pollutant_avg") or cpcb.get("aqi"),
+                "aqi": cpcb.get("pollutant_avg"),
                 "firms_detections": firms_count,
                 "photo_severity": photo_score,
                 "hotspot_score": round(hotspot_score, 3),

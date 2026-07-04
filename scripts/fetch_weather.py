@@ -6,7 +6,7 @@ import json
 
 import requests
 
-from config import OPEN_METEO_BASE_URL, RAW_DIR, load_zones
+from config import DEFAULT_HEADERS, OPEN_METEO_BASE_URL, RAW_DIR, load_zones
 
 
 def fetch_weather_for_zone(lat, lon):
@@ -17,7 +17,7 @@ def fetch_weather_for_zone(lat, lon):
         "forecast_days": 2,
         "timezone": "Asia/Kolkata",
     }
-    resp = requests.get(OPEN_METEO_BASE_URL, params=params, timeout=30)
+    resp = requests.get(OPEN_METEO_BASE_URL, params=params, headers=DEFAULT_HEADERS, timeout=30)
     resp.raise_for_status()
     return resp.json()
 

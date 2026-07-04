@@ -9,8 +9,8 @@
     { "id": "okhla", "name": "Okhla Phase 2", "lat": 28.5355, "lon": 77.2726, "cpcb_station": "Okhla Phase-2, Delhi - DPCC" },
     { "id": "wazirpur", "name": "Wazirpur", "lat": 28.6997, "lon": 77.1650, "cpcb_station": "Wazirpur, Delhi - DPCC" },
     { "id": "vivek_vihar", "name": "Vivek Vihar", "lat": 28.6725, "lon": 77.3151, "cpcb_station": "Vivek Vihar, Delhi - DPCC" },
-    { "id": "noida_sec62", "name": "Noida Sector 62", "lat": 28.6274, "lon": 77.3630, "cpcb_station": "Sector 62, Noida - IMD" },
-    { "id": "gurugram_sec51", "name": "Gurugram Sector 51", "lat": 28.4425, "lon": 77.0722, "cpcb_station": "Sector 51, Gurugram - HSPCB" },
+    { "id": "noida_sec62", "name": "Noida Sector 62", "lat": 28.6274, "lon": 77.3630, "cpcb_station": "Sector - 62, Noida - IITM" },
+    { "id": "gurugram_sec51", "name": "Gurugram Sector 51", "lat": 28.4425, "lon": 77.0722, "cpcb_station": "Sector-51, Gurugram - HSPCB" },
     { "id": "ghaziabad_sanjay_nagar", "name": "Ghaziabad Sanjay Nagar", "lat": 28.6825, "lon": 77.4519, "cpcb_station": "Sanjay Nagar, Ghaziabad - UPPCB" }
   ],
   "notes": "Zone list = subset of active CPCB/DPCC/HSPCB/UPPCB monitoring stations across Delhi NCR, used both as the spatial grid for hotspot fusion and as the query key for CPCB station-wise historical data. Verify exact station names against the data.gov.in resource before Day 1 pull -- names vary slightly across releases."

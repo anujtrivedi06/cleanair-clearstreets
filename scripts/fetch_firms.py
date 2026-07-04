@@ -8,7 +8,7 @@ import json
 
 import requests
 
-from config import FIRMS_MAP_KEY, NCR_BBOX, RAW_DIR
+from config import DEFAULT_HEADERS, FIRMS_MAP_KEY, NCR_BBOX, RAW_DIR
 
 # VIIRS_SNPP_NRT = near-real-time VIIRS active fire product.
 FIRMS_URL = (
@@ -19,7 +19,7 @@ FIRMS_URL = (
 
 def fetch_ncr_fire_hotspots():
     url = FIRMS_URL.format(key=FIRMS_MAP_KEY, **NCR_BBOX)
-    resp = requests.get(url, timeout=30)
+    resp = requests.get(url, headers=DEFAULT_HEADERS, timeout=30)
     resp.raise_for_status()
     return resp.text  # CSV
 
