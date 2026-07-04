@@ -5,7 +5,7 @@
       "name": "Anand Vihar",
       "lat": 28.6469,
       "lon": 77.3152,
-      "aqi": 143.0,
+      "aqi": 143.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "hotspot_score": 0.143
@@ -15,7 +15,7 @@
       "name": "R.K. Puram",
       "lat": 28.5644,
       "lon": 77.177,
-      "aqi": 131.0,
+      "aqi": 130.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "hotspot_score": 0.131
@@ -35,47 +35,47 @@
       "name": "ITO",
       "lat": 28.6304,
       "lon": 77.2497,
-      "aqi": 101.5,
+      "aqi": 101.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.102
+      "hotspot_score": 0.101
     },
     {
       "zone_id": "dwarka",
       "name": "Dwarka Sector 8",
       "lat": 28.571,
       "lon": 77.072,
-      "aqi": 119.0,
+      "aqi": 118.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.119
+      "hotspot_score": 0.118
     },
     {
       "zone_id": "rohini",
       "name": "Rohini",
       "lat": 28.733,
       "lon": 77.12,
-      "aqi": 137.5,
+      "aqi": 136.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.138
+      "hotspot_score": 0.136
     },
     {
       "zone_id": "okhla",
       "name": "Okhla Phase 2",
       "lat": 28.5355,
       "lon": 77.2726,
-      "aqi": 116.0,
+      "aqi": 114.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.116
+      "hotspot_score": 0.115
     },
     {
       "zone_id": "wazirpur",
       "name": "Wazirpur",
       "lat": 28.6997,
       "lon": 77.165,
-      "aqi": 117.5,
+      "aqi": 116.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "hotspot_score": 0.117
@@ -85,7 +85,7 @@
       "name": "Vivek Vihar",
       "lat": 28.6725,
       "lon": 77.3151,
-      "aqi": 94.5,
+      "aqi": 95.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "hotspot_score": 0.095
@@ -95,30 +95,30 @@
       "name": "Noida Sector 62",
       "lat": 28.6274,
       "lon": 77.363,
-      "aqi": 91.0,
+      "aqi": 90.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.091
+      "hotspot_score": 0.09
     },
     {
       "zone_id": "gurugram_sec51",
       "name": "Gurugram Sector 51",
       "lat": 28.4425,
       "lon": 77.0722,
-      "aqi": 205.5,
+      "aqi": 206.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.205
+      "hotspot_score": 0.206
     },
     {
       "zone_id": "ghaziabad_sanjay_nagar",
       "name": "Ghaziabad Sanjay Nagar",
       "lat": 28.6825,
       "lon": 77.4519,
-      "aqi": 118.0,
+      "aqi": 117.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.118
+      "hotspot_score": 0.117
     }
   ]
 }

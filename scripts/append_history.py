@@ -80,6 +80,7 @@ def append_all():
                 "aqi": cpcb["pollutant_avg"],
                 "wind_speed": weather["wind_speed"],
                 "humidity": weather["humidity"],
+                "source": "cpcb_live",
             }
         )
         history = history[-MAX_HISTORY_POINTS:]

@@ -1,8 +1,651 @@
 [
   {
+    "timestamp": "2026-04-04T12:00:00+00:00",
+    "aqi": 125.3,
+    "wind_speed": 4.6,
+    "humidity": 60.8,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-05T12:00:00+00:00",
+    "aqi": 167.0,
+    "wind_speed": 5.3,
+    "humidity": 50.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-06T12:00:00+00:00",
+    "aqi": 202.6,
+    "wind_speed": 5.7,
+    "humidity": 37.8,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-07T12:00:00+00:00",
+    "aqi": 274.5,
+    "wind_speed": 8.5,
+    "humidity": 55.8,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-08T12:00:00+00:00",
+    "aqi": 89.6,
+    "wind_speed": 6.1,
+    "humidity": 71.5,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-09T12:00:00+00:00",
+    "aqi": 116.9,
+    "wind_speed": 5.8,
+    "humidity": 61.1,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-10T12:00:00+00:00",
+    "aqi": 462.9,
+    "wind_speed": 11.9,
+    "humidity": 43.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-11T12:00:00+00:00",
+    "aqi": 313.9,
+    "wind_speed": 9.8,
+    "humidity": 34.7,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-12T12:00:00+00:00",
+    "aqi": 326.6,
+    "wind_speed": 8.3,
+    "humidity": 33.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-13T12:00:00+00:00",
+    "aqi": 242.0,
+    "wind_speed": 8.3,
+    "humidity": 29.8,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-14T12:00:00+00:00",
+    "aqi": 187.7,
+    "wind_speed": 6.2,
+    "humidity": 27.9,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-15T12:00:00+00:00",
+    "aqi": 191.6,
+    "wind_speed": 7.6,
+    "humidity": 24.4,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-16T12:00:00+00:00",
+    "aqi": 168.4,
+    "wind_speed": 5.3,
+    "humidity": 24.5,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-17T12:00:00+00:00",
+    "aqi": 143.6,
+    "wind_speed": 6.4,
+    "humidity": 26.1,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-18T12:00:00+00:00",
+    "aqi": 214.1,
+    "wind_speed": 5.7,
+    "humidity": 30.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-19T12:00:00+00:00",
+    "aqi": 202.6,
+    "wind_speed": 7.6,
+    "humidity": 23.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-20T12:00:00+00:00",
+    "aqi": 333.9,
+    "wind_speed": 8.7,
+    "humidity": 24.8,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-21T12:00:00+00:00",
+    "aqi": 321.5,
+    "wind_speed": 10.0,
+    "humidity": 19.1,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-22T12:00:00+00:00",
+    "aqi": 291.1,
+    "wind_speed": 8.5,
+    "humidity": 22.7,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-23T12:00:00+00:00",
+    "aqi": 204.3,
+    "wind_speed": 7.8,
+    "humidity": 19.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-24T12:00:00+00:00",
+    "aqi": 182.0,
+    "wind_speed": 5.5,
+    "humidity": 24.0,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-25T12:00:00+00:00",
+    "aqi": 396.9,
+    "wind_speed": 8.5,
+    "humidity": 24.5,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-26T12:00:00+00:00",
+    "aqi": 386.1,
+    "wind_speed": 9.3,
+    "humidity": 25.3,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-27T12:00:00+00:00",
+    "aqi": 368.8,
+    "wind_speed": 9.1,
+    "humidity": 22.9,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-28T12:00:00+00:00",
+    "aqi": 354.9,
+    "wind_speed": 6.9,
+    "humidity": 31.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-29T12:00:00+00:00",
+    "aqi": 144.5,
+    "wind_speed": 5.3,
+    "humidity": 37.5,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-04-30T12:00:00+00:00",
+    "aqi": 197.1,
+    "wind_speed": 7.7,
+    "humidity": 41.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-01T12:00:00+00:00",
+    "aqi": 244.6,
+    "wind_speed": 7.9,
+    "humidity": 50.4,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-02T12:00:00+00:00",
+    "aqi": 250.5,
+    "wind_speed": 7.4,
+    "humidity": 41.5,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-03T12:00:00+00:00",
+    "aqi": 345.1,
+    "wind_speed": 11.1,
+    "humidity": 44.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-04T12:00:00+00:00",
+    "aqi": 154.0,
+    "wind_speed": 10.8,
+    "humidity": 64.0,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-05T12:00:00+00:00",
+    "aqi": 68.0,
+    "wind_speed": 5.5,
+    "humidity": 64.1,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-06T12:00:00+00:00",
+    "aqi": 122.9,
+    "wind_speed": 4.0,
+    "humidity": 48.5,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-07T12:00:00+00:00",
+    "aqi": 323.1,
+    "wind_speed": 12.0,
+    "humidity": 50.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-08T12:00:00+00:00",
+    "aqi": 219.1,
+    "wind_speed": 9.0,
+    "humidity": 56.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-09T12:00:00+00:00",
+    "aqi": 149.6,
+    "wind_speed": 7.1,
+    "humidity": 47.0,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-10T12:00:00+00:00",
+    "aqi": 165.6,
+    "wind_speed": 7.4,
+    "humidity": 43.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-11T12:00:00+00:00",
+    "aqi": 155.0,
+    "wind_speed": 6.5,
+    "humidity": 41.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-12T12:00:00+00:00",
+    "aqi": 235.8,
+    "wind_speed": 10.3,
+    "humidity": 46.0,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-13T12:00:00+00:00",
+    "aqi": 205.6,
+    "wind_speed": 6.6,
+    "humidity": 45.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-14T12:00:00+00:00",
+    "aqi": 229.5,
+    "wind_speed": 5.3,
+    "humidity": 38.3,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-15T12:00:00+00:00",
+    "aqi": 242.6,
+    "wind_speed": 8.3,
+    "humidity": 32.1,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-16T12:00:00+00:00",
+    "aqi": 380.1,
+    "wind_speed": 8.2,
+    "humidity": 29.1,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-17T12:00:00+00:00",
+    "aqi": 485.2,
+    "wind_speed": 10.3,
+    "humidity": 26.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-18T12:00:00+00:00",
+    "aqi": 471.9,
+    "wind_speed": 9.6,
+    "humidity": 25.0,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-19T12:00:00+00:00",
+    "aqi": 303.1,
+    "wind_speed": 9.8,
+    "humidity": 17.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-20T12:00:00+00:00",
+    "aqi": 217.4,
+    "wind_speed": 8.3,
+    "humidity": 19.0,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-21T12:00:00+00:00",
+    "aqi": 466.6,
+    "wind_speed": 12.9,
+    "humidity": 21.0,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-22T12:00:00+00:00",
+    "aqi": 385.7,
+    "wind_speed": 9.2,
+    "humidity": 19.1,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-23T12:00:00+00:00",
+    "aqi": 362.9,
+    "wind_speed": 9.3,
+    "humidity": 22.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-24T12:00:00+00:00",
+    "aqi": 375.2,
+    "wind_speed": 8.7,
+    "humidity": 20.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-25T12:00:00+00:00",
+    "aqi": 394.5,
+    "wind_speed": 10.7,
+    "humidity": 18.1,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-26T12:00:00+00:00",
+    "aqi": 427.2,
+    "wind_speed": 9.2,
+    "humidity": 16.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-27T12:00:00+00:00",
+    "aqi": 467.0,
+    "wind_speed": 8.5,
+    "humidity": 16.5,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-28T12:00:00+00:00",
+    "aqi": 500.2,
+    "wind_speed": 8.3,
+    "humidity": 37.4,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-29T12:00:00+00:00",
+    "aqi": 371.5,
+    "wind_speed": 10.2,
+    "humidity": 54.4,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-30T12:00:00+00:00",
+    "aqi": 234.6,
+    "wind_speed": 8.9,
+    "humidity": 64.0,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-05-31T12:00:00+00:00",
+    "aqi": 178.9,
+    "wind_speed": 7.5,
+    "humidity": 62.7,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-01T12:00:00+00:00",
+    "aqi": 113.2,
+    "wind_speed": 6.2,
+    "humidity": 58.0,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-02T12:00:00+00:00",
+    "aqi": 104.5,
+    "wind_speed": 6.1,
+    "humidity": 49.8,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-03T12:00:00+00:00",
+    "aqi": 101.6,
+    "wind_speed": 5.0,
+    "humidity": 41.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-04T12:00:00+00:00",
+    "aqi": 158.9,
+    "wind_speed": 8.2,
+    "humidity": 43.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-05T12:00:00+00:00",
+    "aqi": 176.2,
+    "wind_speed": 5.2,
+    "humidity": 58.8,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-06T12:00:00+00:00",
+    "aqi": 170.4,
+    "wind_speed": 5.4,
+    "humidity": 42.8,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-07T12:00:00+00:00",
+    "aqi": 239.6,
+    "wind_speed": 7.6,
+    "humidity": 42.6,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-08T12:00:00+00:00",
+    "aqi": 308.3,
+    "wind_speed": 9.5,
+    "humidity": 32.7,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-09T12:00:00+00:00",
+    "aqi": 308.5,
+    "wind_speed": 9.5,
+    "humidity": 27.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-10T12:00:00+00:00",
+    "aqi": 420.9,
+    "wind_speed": 8.7,
+    "humidity": 27.8,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-11T12:00:00+00:00",
+    "aqi": 511.1,
+    "wind_speed": 11.5,
+    "humidity": 48.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-12T12:00:00+00:00",
+    "aqi": 235.5,
+    "wind_speed": 11.9,
+    "humidity": 74.4,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-13T12:00:00+00:00",
+    "aqi": 243.9,
+    "wind_speed": 3.5,
+    "humidity": 67.3,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-14T12:00:00+00:00",
+    "aqi": 252.9,
+    "wind_speed": 4.5,
+    "humidity": 58.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-15T12:00:00+00:00",
+    "aqi": 285.7,
+    "wind_speed": 7.4,
+    "humidity": 51.9,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-16T12:00:00+00:00",
+    "aqi": 293.3,
+    "wind_speed": 5.7,
+    "humidity": 61.4,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-17T12:00:00+00:00",
+    "aqi": 293.4,
+    "wind_speed": 4.6,
+    "humidity": 52.9,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-18T12:00:00+00:00",
+    "aqi": 204.4,
+    "wind_speed": 7.5,
+    "humidity": 41.9,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-19T12:00:00+00:00",
+    "aqi": 383.1,
+    "wind_speed": 8.6,
+    "humidity": 40.8,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-20T12:00:00+00:00",
+    "aqi": 327.2,
+    "wind_speed": 8.5,
+    "humidity": 41.3,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-21T12:00:00+00:00",
+    "aqi": 374.0,
+    "wind_speed": 8.7,
+    "humidity": 38.4,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-22T12:00:00+00:00",
+    "aqi": 318.5,
+    "wind_speed": 8.8,
+    "humidity": 40.3,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-23T12:00:00+00:00",
+    "aqi": 197.0,
+    "wind_speed": 6.1,
+    "humidity": 40.9,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-24T12:00:00+00:00",
+    "aqi": 237.9,
+    "wind_speed": 6.4,
+    "humidity": 43.9,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-25T12:00:00+00:00",
+    "aqi": 187.0,
+    "wind_speed": 4.1,
+    "humidity": 42.7,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-26T12:00:00+00:00",
+    "aqi": 127.4,
+    "wind_speed": 3.9,
+    "humidity": 41.8,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-27T12:00:00+00:00",
+    "aqi": 181.1,
+    "wind_speed": 5.2,
+    "humidity": 41.3,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-28T12:00:00+00:00",
+    "aqi": 148.7,
+    "wind_speed": 7.3,
+    "humidity": 41.0,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-29T12:00:00+00:00",
+    "aqi": 292.5,
+    "wind_speed": 8.3,
+    "humidity": 37.5,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-06-30T12:00:00+00:00",
+    "aqi": 418.9,
+    "wind_speed": 10.0,
+    "humidity": 51.7,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-07-01T12:00:00+00:00",
+    "aqi": 132.8,
+    "wind_speed": 8.1,
+    "humidity": 72.2,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-07-02T12:00:00+00:00",
+    "aqi": 80.6,
+    "wind_speed": 4.3,
+    "humidity": 76.0,
+    "source": "open_meteo_backfill"
+  },
+  {
+    "timestamp": "2026-07-03T12:00:00+00:00",
+    "aqi": 57.6,
+    "wind_speed": 5.2,
+    "humidity": 67.8,
+    "source": "open_meteo_backfill"
+  },
+  {
     "timestamp": "2026-07-04T12:05:45.336871+00:00",
     "aqi": 98.5,
     "wind_speed": 6.2,
     "humidity": 68
+  },
+  {
+    "timestamp": "2026-07-04T13:06:30.047437+00:00",
+    "aqi": 98.5,
+    "wind_speed": 5.5,
+    "humidity": 65
   }
 ]

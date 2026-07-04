@@ -24,8 +24,19 @@ water-mist cannons before a spike happens.
    station AQI, and NASA FIRMS fire/smoke detections into a per-zone hotspot score
    across a Delhi NCR grid.
 4. **24h spike prediction** — a lightweight regression model forecasts next-day AQI
-   per zone using historical AQI + weather (wind, humidity, temperature from
-   Open-Meteo/NASA POWER).
+   per zone, trained on:
+   - **Live data (source of truth)**: real CPCB ground-station PM2.5/PM10 readings +
+     Open-Meteo weather, accumulated every 3 hours via a scheduled GitHub Action.
+   - **Historical bootstrap (proxy, clearly labeled)**: ~90 days of daily AQI-proxy +
+     weather per zone from Open-Meteo's Air Quality Archive (a CAMS reanalysis
+     model, not raw CPCB data) via `scripts/backfill_history.py`. CPCB's live feed
+     retains no historical records (confirmed empirically — every station reports
+     the same single `last_update` timestamp, and querying a past date returns zero
+     rows), so there is no real historical CPCB series to pull. This backfill exists
+     purely to give the regression enough points to train on immediately rather than
+     waiting ~1-2 days for live accumulation; every point is tagged
+     `"source": "open_meteo_backfill"` in `data/processed/history_*.json` so it's
+     always distinguishable from genuine live CPCB readings.
 5. **Dashboard** — a Leaflet/OpenStreetMap view shows current hotspots, predicted
    spikes, and a municipal action list (e.g. "Zone X — spike predicted in 18h — deploy
    water-mist cannon").
