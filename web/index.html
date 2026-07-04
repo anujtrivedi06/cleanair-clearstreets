@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CleanAir &amp; Clear Streets — Delhi NCR</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>CleanAir &amp; Clear Streets</h1>
+    <p>Live pollution hotspots &amp; 24h spike forecast — Delhi NCR</p>
+  </header>
+
+  <main>
+    <section id="map"></section>
+
+    <aside id="sidebar">
+      <div id="alerts">
+        <h2>Municipal Alerts</h2>
+        <ul id="alert-list"><li class="placeholder">Loading hotspot data…</li></ul>
+      </div>
+
+      <div id="report-form">
+        <h2>Report a pollution source</h2>
+        <form id="submit-form">
+          <label>Photo
+            <input type="file" id="photo-input" accept="image/*" capture="environment" required />
+          </label>
+          <label>Location
+            <select id="zone-select"></select>
+          </label>
+          <button type="submit">Classify &amp; submit</button>
+        </form>
+        <div id="classification-result"></div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/submit.js"></script>
+</body>
+</html>

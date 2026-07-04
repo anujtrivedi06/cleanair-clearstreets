@@ -1,0 +1,20 @@
+* { box-sizing: border-box; font-family: system-ui, sans-serif; }
+body { margin: 0; }
+header { background: #1b1f23; color: #fff; padding: 1rem 1.5rem; }
+header h1 { margin: 0; font-size: 1.4rem; }
+header p { margin: 0.25rem 0 0; color: #b8c0c8; font-size: 0.9rem; }
+
+main { display: flex; height: calc(100vh - 72px); }
+#map { flex: 1; }
+#sidebar { width: 340px; overflow-y: auto; padding: 1rem; border-left: 1px solid #ddd; }
+
+#alerts h2, #report-form h2 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+#alert-list { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+#alert-list li { padding: 0.6rem; margin-bottom: 0.5rem; border-radius: 6px; background: #fef3e0; border-left: 4px solid #e0a021; font-size: 0.85rem; }
+#alert-list li.placeholder { background: none; border: none; color: #888; }
+#alert-list li.severe { background: #fde3e3; border-left-color: #d0342c; }
+
+#report-form form { display: flex; flex-direction: column; gap: 0.6rem; }
+#report-form label { font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.25rem; }
+#report-form button { padding: 0.5rem; background: #1a73e8; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+#classification-result { margin-top: 0.75rem; font-size: 0.85rem; }
