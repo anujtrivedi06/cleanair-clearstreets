@@ -65,7 +65,8 @@ def fuse():
         pm_score = normalize_pm_proxy(cpcb.get("pollutant_avg"))
         firms_count = nearest_zone_firms_count(zone, firms_rows)
         firms_score = min(firms_count / 5, 1.0)  # 5+ detections = max score
-        photo_score = photo_scores.get(zone["id"], {}).get("severity", 0.0)
+        photo_entry = photo_scores.get(zone["id"], {})
+        photo_score = photo_entry.get("severity", 0.0)
 
         hotspot_score = (
             AQI_WEIGHT * pm_score + FIRMS_WEIGHT * firms_score + PHOTO_WEIGHT * photo_score
@@ -80,6 +81,8 @@ def fuse():
                 "aqi": cpcb.get("pollutant_avg"),
                 "firms_detections": firms_count,
                 "photo_severity": photo_score,
+                "photo_count": photo_entry.get("count", 0),
+                "photo_type": photo_entry.get("type", "none"),
                 "hotspot_score": round(hotspot_score, 3),
             }
         )

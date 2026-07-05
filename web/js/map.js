@@ -1,5 +1,6 @@
-// Renders the Delhi NCR hotspot map from the static JSON published by the
-// GitHub Actions pipeline (scripts/run_pipeline.py -> web/data/hotspots.json).
+// Renders the Delhi NCR hotspot map + zone tile list from the static JSON
+// published by the GitHub Actions pipeline (scripts/run_pipeline.py ->
+// web/data/hotspots.json).
 
 const map = L.map("map").setView([28.6139, 77.209], 10); // Delhi NCR center
 
@@ -8,50 +9,118 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 18,
 }).addTo(map);
 
-function severityColor(score) {
-  if (score >= 0.7) return "#d0342c"; // severe
-  if (score >= 0.4) return "#e0a021"; // moderate
-  return "#3a9d5d"; // low
+function severityLevel(score) {
+  if (score >= 0.7) return "severe";
+  if (score >= 0.4) return "moderate";
+  return "low";
 }
 
-function renderAlert(zone) {
-  const li = document.createElement("li");
-  const severe = zone.hotspot_score >= 0.7;
-  li.className = severe ? "severe" : "";
-  const spikeText =
-    zone.predicted_aqi_24h != null
-      ? `predicted AQI ${zone.predicted_aqi_24h} in ~24h`
-      : "prediction pending (needs more history)";
-  const action = severe ? "Deploy water-mist cannon / cleanup crew" : "Monitor";
-  li.textContent = `${zone.name} — score ${zone.hotspot_score} — ${spikeText} — ${action}`;
-  return li;
+function severityColor(level) {
+  return { severe: "#d0342c", moderate: "#e0a021", low: "#3a9d5d" }[level];
+}
+
+function recommendedAction(level) {
+  if (level === "severe") return "Deploy water-mist cannon / cleanup crew";
+  if (level === "moderate") return "Schedule inspection within 24h";
+  return "Monitor";
+}
+
+function forecastBadge(zone) {
+  if (zone.predicted_aqi_24h == null) {
+    return { text: "pending", className: "pending" };
+  }
+  const delta = zone.predicted_aqi_24h - (zone.aqi ?? zone.predicted_aqi_24h);
+  const trendClass = delta > 5 ? "up" : delta < -5 ? "down" : "steady";
+  const arrow = delta > 5 ? "↑" : delta < -5 ? "↓" : "→";
+  return { text: `${arrow} ${zone.predicted_aqi_24h}`, className: trendClass };
+}
+
+function buildTile(zone, markersByZone) {
+  const level = severityLevel(zone.hotspot_score);
+  const forecast = forecastBadge(zone);
+
+  const tile = document.createElement("div");
+  tile.className = `zone-tile severity-${level}`;
+  tile.style.setProperty("--severity-color", severityColor(level));
+  tile.dataset.zoneId = zone.zone_id;
+
+  const photoNote =
+    zone.photo_severity > 0
+      ? `<dt>Citizen reports</dt><dd>severity ${zone.photo_severity}</dd>`
+      : "";
+
+  const briefingBlock = zone.ai_briefing
+    ? `<p class="tile-briefing"><span class="briefing-label">AI briefing</span>${zone.ai_briefing}</p>`
+    : "";
+
+  tile.innerHTML = `
+    <div class="tile-summary">
+      <span class="severity-dot"></span>
+      <div class="tile-main">
+        <div class="tile-name">${zone.name}</div>
+        <div class="tile-current">AQI proxy ${zone.aqi ?? "n/a"} · hotspot score ${zone.hotspot_score}</div>
+      </div>
+      <div class="tile-forecast">
+        <span>24h forecast</span>
+        <span class="forecast-value ${forecast.className}">${forecast.text}</span>
+      </div>
+      <span class="expand-icon">▾</span>
+    </div>
+    <div class="tile-details">
+      <p class="tile-action">${recommendedAction(level)}</p>
+      ${briefingBlock}
+      <dl>
+        <dt>FIRMS fire/smoke detections</dt><dd>${zone.firms_detections}</dd>
+        ${photoNote}
+      </dl>
+    </div>
+  `;
+
+  tile.querySelector(".tile-summary").addEventListener("click", () => {
+    const wasExpanded = tile.classList.contains("expanded");
+    document.querySelectorAll(".zone-tile.expanded").forEach((t) => t.classList.remove("expanded"));
+    if (!wasExpanded) {
+      tile.classList.add("expanded");
+      const marker = markersByZone.get(zone.zone_id);
+      if (marker) {
+        map.flyTo([zone.lat, zone.lon], 12, { duration: 0.6 });
+        marker.openPopup();
+      }
+    }
+  });
+
+  return tile;
 }
 
 async function loadHotspots() {
   const res = await fetch("data/hotspots.json", { cache: "no-store" });
   const { hotspots } = await res.json();
 
-  const alertList = document.getElementById("alert-list");
-  alertList.innerHTML = "";
+  const tilesContainer = document.getElementById("zone-tiles");
+  tilesContainer.innerHTML = "";
 
   const zoneSelect = document.getElementById("zone-select");
   zoneSelect.innerHTML = "";
 
+  const markersByZone = new Map();
+
   hotspots
-    .sort((a, b) => b.hotspot_score - a.hotspot_score)
+    .sort((a, b) => (b.aqi ?? -1) - (a.aqi ?? -1))
     .forEach((zone) => {
-      L.circleMarker([zone.lat, zone.lon], {
+      const level = severityLevel(zone.hotspot_score);
+      const marker = L.circleMarker([zone.lat, zone.lon], {
         radius: 10 + zone.hotspot_score * 12,
-        color: severityColor(zone.hotspot_score),
-        fillColor: severityColor(zone.hotspot_score),
+        color: severityColor(level),
+        fillColor: severityColor(level),
         fillOpacity: 0.6,
       })
         .addTo(map)
         .bindPopup(
           `<strong>${zone.name}</strong><br/>Hotspot score: ${zone.hotspot_score}<br/>AQI: ${zone.aqi ?? "n/a"}<br/>Predicted 24h AQI: ${zone.predicted_aqi_24h ?? "n/a"}`
         );
+      markersByZone.set(zone.zone_id, marker);
 
-      alertList.appendChild(renderAlert(zone));
+      tilesContainer.appendChild(buildTile(zone, markersByZone));
 
       const opt = document.createElement("option");
       opt.value = zone.zone_id;
@@ -62,6 +131,13 @@ async function loadHotspots() {
 
 loadHotspots().catch((err) => {
   console.error("Failed to load hotspot data", err);
-  document.getElementById("alert-list").innerHTML =
-    '<li class="placeholder">No data yet — run the pipeline (scripts/run_pipeline.py) at least once.</li>';
+  document.getElementById("zone-tiles").innerHTML =
+    '<div class="placeholder-tile">No data yet — run the pipeline (scripts/run_pipeline.py) at least once.</div>';
+});
+
+document.getElementById("report-toggle").addEventListener("click", () => {
+  const body = document.getElementById("report-body");
+  const icon = document.querySelector("#report-toggle .toggle-icon");
+  const open = body.classList.toggle("open");
+  icon.textContent = open ? "−" : "+";
 });

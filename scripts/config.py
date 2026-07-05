@@ -27,6 +27,14 @@ NCR_STATES = ["Delhi", "Haryana", "Uttar Pradesh"]
 # NASA FIRMS — free API key from https://firms.modaps.eosdis.nasa.gov/api/
 FIRMS_MAP_KEY = os.environ.get("FIRMS_MAP_KEY", "")
 
+# Gemini API key, used server-side only (AI zone briefings) -- never shipped
+# to the browser, so domain-restriction limitations don't apply here (see
+# web/js/submit.js / README for why the browser path uses Firebase AI Logic
+# instead of a raw key). Model choice lives in generate_briefing.py, not here
+# -- it's deliberately a different model from the browser path to avoid
+# sharing the same tight daily quota.
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+
 # Firestore -- stores citizen photo reports (public create, backend-only read;
 # see firestore.rules). Backend access uses a service-account key, which
 # bypasses security rules entirely, so it can read what the public API can't.

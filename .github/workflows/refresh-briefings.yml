@@ -1,0 +1,38 @@
+name: Refresh AI zone briefings
+
+on:
+  schedule:
+    - cron: "30 1 * * *"   # once/day (~7am IST) -- Gemini free tier is capped
+                            # at 20 requests/day per model; 12 zones fits with
+                            # buffer, running more often would not.
+  workflow_dispatch: {}       # manual trigger, e.g. right before a live demo
+
+jobs:
+  refresh-briefings:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Refresh briefings
+        working-directory: scripts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python refresh_briefings.py
+
+      - name: Commit updated briefings
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add web/data/hotspots.json
+          git diff --cached --quiet || git commit -m "Refresh AI zone briefings [automated]"
+          git pull --rebase origin main
+          git push

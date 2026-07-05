@@ -5,80 +5,96 @@
       "name": "Anand Vihar",
       "lat": 28.6469,
       "lon": 77.3152,
-      "aqi": 203.0,
+      "aqi": 205.0,
       "firms_detections": 0,
-      "photo_severity": 0.75,
-      "hotspot_score": 0.353
+      "photo_severity": 0.9,
+      "photo_count": 3,
+      "photo_type": "smoke",
+      "hotspot_score": 0.385
     },
     {
       "zone_id": "rk_puram",
       "name": "R.K. Puram",
       "lat": 28.5644,
       "lon": 77.177,
-      "aqi": 154.0,
+      "aqi": 158.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.154
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.158
     },
     {
       "zone_id": "punjabi_bagh",
       "name": "Punjabi Bagh",
       "lat": 28.6692,
       "lon": 77.131,
-      "aqi": 195.5,
+      "aqi": 206.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.196
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.206
     },
     {
       "zone_id": "ito",
       "name": "ITO",
       "lat": 28.6304,
       "lon": 77.2497,
-      "aqi": 172.0,
+      "aqi": 176.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.172
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.176
     },
     {
       "zone_id": "dwarka",
       "name": "Dwarka Sector 8",
       "lat": 28.571,
       "lon": 77.072,
-      "aqi": 158.5,
+      "aqi": 158.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.159
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.158
     },
     {
       "zone_id": "rohini",
       "name": "Rohini",
       "lat": 28.733,
       "lon": 77.12,
-      "aqi": 169.0,
+      "aqi": 176.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.169
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.176
     },
     {
       "zone_id": "okhla",
       "name": "Okhla Phase 2",
       "lat": 28.5355,
       "lon": 77.2726,
-      "aqi": 135.0,
+      "aqi": 137.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.135
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.138
     },
     {
       "zone_id": "wazirpur",
       "name": "Wazirpur",
       "lat": 28.6997,
       "lon": 77.165,
-      "aqi": 200.0,
+      "aqi": 209.5,
       "firms_detections": 0,
-      "photo_severity": 0.0,
-      "hotspot_score": 0.2
+      "photo_severity": 0.8,
+      "photo_count": 1,
+      "photo_type": "smoke",
+      "hotspot_score": 0.37
     },
     {
       "zone_id": "vivek_vihar",
@@ -88,6 +104,8 @@
       "aqi": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
+      "photo_count": 0,
+      "photo_type": "none",
       "hotspot_score": 0.0
     },
     {
@@ -95,10 +113,12 @@
       "name": "Noida Sector 62",
       "lat": 28.6274,
       "lon": 77.363,
-      "aqi": 120.0,
+      "aqi": 121.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.12
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.121
     },
     {
       "zone_id": "gurugram_sec51",
@@ -108,6 +128,8 @@
       "aqi": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
+      "photo_count": 0,
+      "photo_type": "none",
       "hotspot_score": 0.0
     },
     {
@@ -115,10 +137,12 @@
       "name": "Ghaziabad Sanjay Nagar",
       "lat": 28.6825,
       "lon": 77.4519,
-      "aqi": 146.3,
+      "aqi": 141.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.146
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.141
     }
   ]
 }

@@ -1,12 +1,20 @@
 """
-Orchestrates the full pipeline: fetch -> fuse -> predict -> merge -> publish
-to web/data/hotspots.json for the frontend to read as a static file.
+Orchestrates the frequent data refresh: fetch -> fuse -> predict -> merge ->
+publish to web/data/hotspots.json for the frontend to read as a static file.
+
+AI zone briefings are deliberately NOT generated here -- see
+generate_briefings.py and .github/workflows/refresh-briefings.yml. The
+Gemini free tier caps each model at 20 requests/day per project; running all
+12 zones' briefings on this pipeline's 3-hourly cadence would need ~96
+requests/day, far over budget. Briefings are refreshed once/day instead
+(12/day, comfortable buffer left for manual triggers), and this script
+carries forward whatever briefing was last generated so the UI never loses
+it between briefing refreshes.
 
 Run manually during development:  python scripts/run_pipeline.py
 Run in CI: see .github/workflows/update-data.yml
 """
 import json
-import shutil
 
 import append_history
 import fetch_cpcb
@@ -24,6 +32,17 @@ def merge_predictions_into_hotspots(hotspots):
     for h in hotspots:
         pred = predictions.get(h["zone_id"], {})
         h["predicted_aqi_24h"] = pred.get("predicted_aqi_24h")
+    return hotspots
+
+
+def carry_forward_briefings(hotspots):
+    existing_path = WEB_DATA_DIR / "hotspots.json"
+    if not existing_path.exists():
+        return hotspots
+    with open(existing_path, encoding="utf-8") as f:
+        existing = {h["zone_id"]: h.get("ai_briefing") for h in json.load(f).get("hotspots", [])}
+    for h in hotspots:
+        h["ai_briefing"] = existing.get(h["zone_id"])
     return hotspots
 
 
@@ -62,6 +81,7 @@ def main():
     hotspots = fuse_hotspots.fuse()
     predict_spike.main()
     hotspots = merge_predictions_into_hotspots(hotspots)
+    hotspots = carry_forward_briefings(hotspots)
     publish(hotspots)
 
 

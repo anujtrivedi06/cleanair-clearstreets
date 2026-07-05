@@ -5,88 +5,112 @@
       "name": "Anand Vihar",
       "lat": 28.6469,
       "lon": 77.3152,
-      "aqi": 203.0,
+      "aqi": 205.0,
       "firms_detections": 0,
-      "photo_severity": 0.75,
-      "hotspot_score": 0.353,
-      "predicted_aqi_24h": 165.4
+      "photo_severity": 0.9,
+      "photo_count": 3,
+      "photo_type": "smoke",
+      "hotspot_score": 0.385,
+      "predicted_aqi_24h": 197.4,
+      "ai_briefing": "Anand Vihar's air quality is unhealthy, a significant jump from its recent average, likely due to a local smoke source as indicated by citizen reports."
     },
     {
       "zone_id": "rk_puram",
       "name": "R.K. Puram",
       "lat": 28.5644,
       "lon": 77.177,
-      "aqi": 154.0,
+      "aqi": 158.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.154,
-      "predicted_aqi_24h": 194.7
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.158,
+      "predicted_aqi_24h": 224.6,
+      "ai_briefing": "R.K. Puram's air quality is poor and worsening, driven by a prolonged period of high pollution, not immediate fires."
     },
     {
       "zone_id": "punjabi_bagh",
       "name": "Punjabi Bagh",
       "lat": 28.6692,
       "lon": 77.131,
-      "aqi": 195.5,
+      "aqi": 206.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.196,
-      "predicted_aqi_24h": 153.4
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.206,
+      "predicted_aqi_24h": 190.7,
+      "ai_briefing": "Punjabi Bagh AQI is unhealthy at 206, driven by a high 30-day average, despite recent improvement and no active fires."
     },
     {
       "zone_id": "ito",
       "name": "ITO",
       "lat": 28.6304,
       "lon": 77.2497,
-      "aqi": 172.0,
+      "aqi": 176.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.172,
-      "predicted_aqi_24h": 146.3
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.176,
+      "predicted_aqi_24h": 179.2,
+      "ai_briefing": "**ITO, Delhi NCR's air quality is currently unhealthy (AQI 176), driven by a persistent industrial/traffic baseline, despite a recent drop from the very poor 30-day average.**"
     },
     {
       "zone_id": "dwarka",
       "name": "Dwarka Sector 8",
       "lat": 28.571,
       "lon": 77.072,
-      "aqi": 158.5,
+      "aqi": 158.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.159,
-      "predicted_aqi_24h": 193.7
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.158,
+      "predicted_aqi_24h": 203.9,
+      "ai_briefing": null
     },
     {
       "zone_id": "rohini",
       "name": "Rohini",
       "lat": 28.733,
       "lon": 77.12,
-      "aqi": 169.0,
+      "aqi": 176.0,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.169,
-      "predicted_aqi_24h": 143.6
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.176,
+      "predicted_aqi_24h": 183.1,
+      "ai_briefing": null
     },
     {
       "zone_id": "okhla",
       "name": "Okhla Phase 2",
       "lat": 28.5355,
       "lon": 77.2726,
-      "aqi": 135.0,
+      "aqi": 137.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.135,
-      "predicted_aqi_24h": 172.6
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.138,
+      "predicted_aqi_24h": 219.2,
+      "ai_briefing": null
     },
     {
       "zone_id": "wazirpur",
       "name": "Wazirpur",
       "lat": 28.6997,
       "lon": 77.165,
-      "aqi": 200.0,
+      "aqi": 209.5,
       "firms_detections": 0,
-      "photo_severity": 0.0,
-      "hotspot_score": 0.2,
-      "predicted_aqi_24h": 160.6
+      "photo_severity": 0.8,
+      "photo_count": 1,
+      "photo_type": "smoke",
+      "hotspot_score": 0.37,
+      "predicted_aqi_24h": 202.8,
+      "ai_briefing": null
     },
     {
       "zone_id": "vivek_vihar",
@@ -96,19 +120,25 @@
       "aqi": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
+      "photo_count": 0,
+      "photo_type": "none",
       "hotspot_score": 0.0,
-      "predicted_aqi_24h": 91.1
+      "predicted_aqi_24h": 91.1,
+      "ai_briefing": null
     },
     {
       "zone_id": "noida_sec62",
       "name": "Noida Sector 62",
       "lat": 28.6274,
       "lon": 77.363,
-      "aqi": 120.0,
+      "aqi": 121.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.12,
-      "predicted_aqi_24h": 115.8
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.121,
+      "predicted_aqi_24h": 135.9,
+      "ai_briefing": null
     },
     {
       "zone_id": "gurugram_sec51",
@@ -118,19 +148,25 @@
       "aqi": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
+      "photo_count": 0,
+      "photo_type": "none",
       "hotspot_score": 0.0,
-      "predicted_aqi_24h": 296.4
+      "predicted_aqi_24h": 296.4,
+      "ai_briefing": null
     },
     {
       "zone_id": "ghaziabad_sanjay_nagar",
       "name": "Ghaziabad Sanjay Nagar",
       "lat": 28.6825,
       "lon": 77.4519,
-      "aqi": 146.3,
+      "aqi": 141.5,
       "firms_detections": 0,
       "photo_severity": 0.0,
-      "hotspot_score": 0.146,
-      "predicted_aqi_24h": 126.7
+      "photo_count": 0,
+      "photo_type": "none",
+      "hotspot_score": 0.141,
+      "predicted_aqi_24h": 132.0,
+      "ai_briefing": null
     }
   ]
 }

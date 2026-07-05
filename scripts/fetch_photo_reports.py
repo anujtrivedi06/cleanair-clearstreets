@@ -53,8 +53,10 @@ def aggregate_by_zone(reports):
         severity = r.get("severity")
         if not zone_id or severity is None:
             continue
-        entry = by_zone.setdefault(zone_id, {"severity": 0.0, "count": 0})
-        entry["severity"] = max(entry["severity"], float(severity))
+        entry = by_zone.setdefault(zone_id, {"severity": 0.0, "count": 0, "type": "none"})
+        if float(severity) >= entry["severity"]:
+            entry["severity"] = float(severity)
+            entry["type"] = r.get("type", "none")
         entry["count"] += 1
     return by_zone
 

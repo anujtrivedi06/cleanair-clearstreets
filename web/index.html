@@ -14,28 +14,39 @@
   </header>
 
   <main>
-    <section id="map"></section>
+    <aside id="zones-panel">
+      <div id="tiles-column">
+        <div class="panel-header">
+          <h2>Zones</h2>
+          <span class="panel-subtitle">Ranked by AQI, high to low</span>
+        </div>
 
-    <aside id="sidebar">
-      <div id="alerts">
-        <h2>Municipal Alerts</h2>
-        <ul id="alert-list"><li class="placeholder">Loading hotspot data…</li></ul>
+        <div id="zone-tiles">
+          <div class="placeholder-tile">Loading hotspot data…</div>
+        </div>
       </div>
 
-      <div id="report-form">
-        <h2>Report a pollution source</h2>
-        <form id="submit-form">
-          <label>Photo
-            <input type="file" id="photo-input" accept="image/*" capture="environment" required />
-          </label>
-          <label>Location
-            <select id="zone-select"></select>
-          </label>
-          <button type="submit">Classify &amp; submit</button>
-        </form>
-        <div id="classification-result"></div>
+      <div id="report-section">
+        <button type="button" id="report-toggle" class="report-toggle">
+          <span class="toggle-icon">+</span>
+          <span>Report a pollution source</span>
+        </button>
+        <div id="report-body" class="report-body">
+          <form id="submit-form">
+            <label>Photo
+              <input type="file" id="photo-input" accept="image/*" capture="environment" required />
+            </label>
+            <label>Location
+              <select id="zone-select"></select>
+            </label>
+            <button type="submit">Classify &amp; submit</button>
+          </form>
+          <div id="classification-result"></div>
+        </div>
       </div>
     </aside>
+
+    <section id="map"></section>
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
