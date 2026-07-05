@@ -1,13 +1,32 @@
-// Citizen photo submission -> Gemini Vision classification, called directly
-// from the browser via the Google AI Studio API.
-//
-// SECURITY NOTE: this key is visible in client-side code. Restrict it to your
-// deployed domain via HTTP referrer restrictions in Google AI Studio / Cloud
-// Console before going live -- see README. Fine for a hackathon prototype,
-// not for production use as-is.
-const GEMINI_API_KEY = "REPLACE_WITH_YOUR_AI_STUDIO_KEY";
-const GEMINI_MODEL = "gemini-2.0-flash";
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+// Citizen photo submission -> Gemini Vision classification via Firebase AI
+// Logic (Gemini Developer API backend). Unlike a raw Generative Language API
+// key, this firebaseConfig is meant to be public -- it identifies the Firebase
+// project, but access control is enforced by Firebase, not by keeping this
+// secret. See README for why we moved off a raw client-side Gemini key.
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+import {
+  getAI,
+  getGenerativeModel,
+  GoogleAIBackend,
+} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-ai.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCGJQ3Xl2_hTloRhyLAV-prVgBzpgngtnU",
+  authDomain: "gen-lang-client-0882700239.firebaseapp.com",
+  projectId: "gen-lang-client-0882700239",
+  storageBucket: "gen-lang-client-0882700239.firebasestorage.app",
+  messagingSenderId: "568172456241",
+  appId: "1:568172456241:web:1dd51495a6cbbc017d2810",
+};
+
+const firebaseApp = initializeApp(firebaseConfig);
+const ai = getAI(firebaseApp, { backend: new GoogleAIBackend() });
+const model = getGenerativeModel(ai, { model: "gemini-2.5-flash" });
+
+// Firestore "reports" collection: public create only (see firestore.rules) --
+// no API key or auth needed for a create request the rules allow.
+const FIREBASE_PROJECT_ID = "gen-lang-client-0882700239";
+const FIRESTORE_REPORTS_URL = `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/reports`;
 
 const CLASSIFY_PROMPT = `You are classifying a photo reported by a citizen for a
 neighbourhood pollution monitoring system. Respond ONLY with compact JSON of the
@@ -26,28 +45,32 @@ function fileToBase64(file) {
 
 async function classifyPhoto(file) {
   const base64Data = await fileToBase64(file);
-  const body = {
-    contents: [
-      {
-        parts: [
-          { text: CLASSIFY_PROMPT },
-          { inline_data: { mime_type: file.type, data: base64Data } },
-        ],
-      },
-    ],
-  };
+  const result = await model.generateContent([
+    CLASSIFY_PROMPT,
+    { inlineData: { mimeType: file.type, data: base64Data } },
+  ]);
+  const text = result.response.text();
+  // Model may wrap JSON in a code fence; strip it defensively.
+  const cleaned = text.replace(/```json|```/g, "").trim();
+  return JSON.parse(cleaned);
+}
 
-  const resp = await fetch(GEMINI_URL, {
+async function saveReportToFirestore(zoneId, result) {
+  const body = {
+    fields: {
+      zoneId: { stringValue: zoneId },
+      type: { stringValue: result.type },
+      severity: { doubleValue: result.severity },
+      reasoning: { stringValue: result.reasoning },
+      timestamp: { stringValue: new Date().toISOString() },
+    },
+  };
+  const resp = await fetch(FIRESTORE_REPORTS_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
   });
-  if (!resp.ok) throw new Error(`Gemini API error: ${resp.status}`);
-  const data = await resp.json();
-  const text = data.candidates?.[0]?.content?.parts?.[0]?.text ?? "{}";
-  // Model may wrap JSON in a code fence; strip it defensively.
-  const cleaned = text.replace(/```json|```/g, "").trim();
-  return JSON.parse(cleaned);
+  if (!resp.ok) throw new Error(`Firestore write error: ${resp.status} ${await resp.text()}`);
 }
 
 document.getElementById("submit-form").addEventListener("submit", async (e) => {
@@ -62,10 +85,10 @@ document.getElementById("submit-form").addEventListener("submit", async (e) => {
   try {
     const result = await classifyPhoto(fileInput.files[0]);
     resultDiv.innerHTML = `<strong>${result.type}</strong> — severity ${result.severity}<br/><em>${result.reasoning}</em>`;
-    // TODO (Day 3): persist { zoneId, ...result, timestamp } to Firestore so
-    // the next pipeline run can fold citizen photo severity into fuse_hotspots.py.
+    await saveReportToFirestore(zoneId, result);
+    resultDiv.innerHTML += `<br/><small>Report submitted — will be reflected on the map within the next pipeline run.</small>`;
   } catch (err) {
     console.error(err);
-    resultDiv.textContent = "Classification failed — check API key / console for details.";
+    resultDiv.textContent = "Classification/submission failed — check console for details.";
   }
 });

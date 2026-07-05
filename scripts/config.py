@@ -27,10 +27,6 @@ NCR_STATES = ["Delhi", "Haryana", "Uttar Pradesh"]
 # NASA FIRMS — free API key from https://firms.modaps.eosdis.nasa.gov/api/
 FIRMS_MAP_KEY = os.environ.get("FIRMS_MAP_KEY", "")
 
-# Gemini API key from Google AI Studio (https://aistudio.google.com/apikey).
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL = "gemini-2.5-flash"
-
 # Firestore -- stores citizen photo reports (public create, backend-only read;
 # see firestore.rules). Backend access uses a service-account key, which
 # bypasses security rules entirely, so it can read what the public API can't.

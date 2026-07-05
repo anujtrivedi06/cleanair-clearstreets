@@ -7,6 +7,8 @@ citizen-uploaded photos (classified with Gemini Vision), CPCB ground-station air
 data, NASA FIRMS fire/smoke detections, and weather data — then surfaces a 24h AQI spike
 forecast and recommended municipal action on a live map.
 
+**Live at: https://gen-lang-client-0882700239.web.app**
+
 ## Problem
 
 City-level AQI apps miss hyper-local pollution events (a garbage fire, an industrial
@@ -18,12 +20,23 @@ water-mist cannons before a spike happens.
 
 1. **Citizen intake** — a web form accepts a photo + location (self-seeded sample photos
    for this prototype, standing in for real citizen submissions).
-2. **Vision classification** — Gemini (via Google AI Studio API) classifies each photo
-   into pollution type + severity (smoke, dust, garbage burning, haze).
-3. **Hotspot fusion** — a scheduled script combines photo classifications, CPCB
+2. **Vision classification** — Gemini, called from the browser via **Firebase AI Logic**
+   (Gemini Developer API backend), classifies each photo into pollution type + severity
+   (smoke, dust, garbage burning, haze). We deliberately moved off a raw client-side
+   Generative Language API key: that key type cannot be restricted by domain once bound
+   to a service account (confirmed empirically — the "Websites" restriction option is
+   disabled for it in Cloud Console), so it would stay permanently exposed and usable by
+   anyone who viewed the page source. Firebase AI Logic's `firebaseConfig` is meant to be
+   public — access control is enforced by Firebase/Firestore rules, not by keeping a
+   secret hidden client-side.
+3. **Citizen report storage** — classified reports are written to **Firestore** (public
+   `create`, no read/update/delete — see `firestore.rules`). Only the backend pipeline,
+   using a service-account key that bypasses these rules, can read them back
+   (`scripts/fetch_photo_reports.py`).
+4. **Hotspot fusion** — a scheduled script combines photo severity (from Firestore), CPCB
    station AQI, and NASA FIRMS fire/smoke detections into a per-zone hotspot score
    across a Delhi NCR grid.
-4. **24h spike prediction** — a lightweight regression model forecasts next-day AQI
+5. **24h spike prediction** — a lightweight regression model forecasts next-day AQI
    per zone, trained on:
    - **Live data (source of truth)**: real CPCB ground-station PM2.5/PM10 readings +
      Open-Meteo weather, accumulated every 3 hours via a scheduled GitHub Action.
@@ -37,13 +50,15 @@ water-mist cannons before a spike happens.
      waiting ~1-2 days for live accumulation; every point is tagged
      `"source": "open_meteo_backfill"` in `data/processed/history_*.json` so it's
      always distinguishable from genuine live CPCB readings.
-5. **Dashboard** — a Leaflet/OpenStreetMap view shows current hotspots, predicted
+6. **Dashboard** — a Leaflet/OpenStreetMap view shows current hotspots, predicted
    spikes, and a municipal action list (e.g. "Zone X — spike predicted in 18h — deploy
    water-mist cannon").
 
 ## Stack
 
-- **Gemini API** (Google AI Studio) — vision classification + reasoning
+- **Firebase AI Logic** (Gemini Developer API backend) — vision classification + reasoning,
+  called directly from the browser with no exposed raw API key
+- **Firestore** — citizen report storage (public create, backend-only read)
 - **Firebase Hosting** — static site hosting (free Spark plan)
 - **GitHub Actions** — scheduled Python pipeline (fetch data → fuse → predict → write
   static JSON), replacing a billed Cloud Run backend
