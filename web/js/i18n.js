@@ -30,6 +30,11 @@ export const translations = {
     popupPredicted: "Predicted 24h AQI",
     listenLabel: "Listen",
     staleNote: "last known reading, station offline",
+    populationLabel: "residents nearby",
+    recurrenceTemplate: "Poor air quality (AQI>200) on {days} of last {total} days",
+    headlineTemplate: "~{count} citizens currently in poor+ AQI zones",
+    schoolsLabel: "schools nearby",
+    hospitalsLabel: "hospitals/clinics nearby",
   },
   hi: {
     subtitle: "लाइव प्रदूषण हॉटस्पॉट और 24 घंटे का पूर्वानुमान — दिल्ली एनसीआर",
@@ -56,6 +61,11 @@ export const translations = {
     popupPredicted: "24 घंटे में अनुमानित AQI",
     listenLabel: "सुनें",
     staleNote: "अंतिम ज्ञात रीडिंग, स्टेशन ऑफ़लाइन है",
+    populationLabel: "आस-पास निवासी",
+    recurrenceTemplate: "पिछले {total} में से {days} दिन खराब वायु गुणवत्ता (AQI>200) रही",
+    headlineTemplate: "वर्तमान में लगभग {count} नागरिक खराब+ AQI क्षेत्रों में हैं",
+    schoolsLabel: "आस-पास स्कूल",
+    hospitalsLabel: "आस-पास अस्पताल/क्लिनिक",
   },
 };
 
@@ -79,6 +89,14 @@ export function onLangChange(fn) {
 export function t(key) {
   const lang = getLang();
   return translations[lang][key] ?? translations.en[key];
+}
+
+export function tFormat(key, vars) {
+  let text = t(key);
+  for (const [k, v] of Object.entries(vars)) {
+    text = text.replace(`{${k}}`, v);
+  }
+  return text;
 }
 
 export function applyStaticText() {

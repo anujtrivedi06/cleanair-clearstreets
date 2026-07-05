@@ -1,0 +1,39 @@
+name: Refresh vulnerable-facility data
+
+on:
+  schedule:
+    - cron: "0 2 * * 0"   # weekly (Sunday) -- school/hospital locations don't
+                           # change day to day, unlike everything else here
+  workflow_dispatch: {}     # manual trigger, e.g. right before a live demo
+
+jobs:
+  refresh-facilities:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch facilities
+        working-directory: scripts
+        run: python fetch_facilities.py
+
+      - name: Merge facility counts into published hotspots.json
+        working-directory: scripts
+        run: python merge_facilities_into_published.py
+
+      - name: Commit updated facility data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/processed/facilities.json web/data/facilities.json data/processed/hotspots.json
+          git diff --cached --quiet || git commit -m "Refresh vulnerable-facility data [automated]"
+          git pull --rebase origin main
+          git push

@@ -1,7 +1,11 @@
 // Renders the Delhi NCR hotspot map + zone tile list from the static JSON
 // published by the GitHub Actions pipeline (scripts/run_pipeline.py ->
 // web/data/hotspots.json).
-import { applyStaticText, getLang, onLangChange, t } from "./i18n.js";
+import { applyStaticText, getLang, onLangChange, t, tFormat } from "./i18n.js";
+
+// Matches scripts/fuse_hotspots.py's POOR_AQI_THRESHOLD -- CPCB's public
+// "Poor" AQI category starts at 201.
+const POOR_AQI_THRESHOLD = 200;
 
 const map = L.map("map").setView([28.6139, 77.209], 10); // Delhi NCR center
 
@@ -55,6 +59,30 @@ function forecastBadge(zone) {
   return { text: `${arrow} ${zone.predicted_aqi_24h}`, className: trendClass };
 }
 
+function sparklineSvg(values) {
+  if (!values || values.length < 2) return "";
+  const w = 140;
+  const h = 34;
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const range = max - min || 1;
+  const points = values
+    .map((v, i) => {
+      const x = (i / (values.length - 1)) * w;
+      const y = h - ((v - min) / range) * h;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    })
+    .join(" ");
+  const thresholdY = h - ((POOR_AQI_THRESHOLD - min) / range) * h;
+  const showThreshold = POOR_AQI_THRESHOLD >= min && POOR_AQI_THRESHOLD <= max;
+  return `
+    <svg class="sparkline" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+      ${showThreshold ? `<line x1="0" y1="${thresholdY.toFixed(1)}" x2="${w}" y2="${thresholdY.toFixed(1)}" class="sparkline-threshold" />` : ""}
+      <polyline points="${points}" class="sparkline-line" />
+    </svg>
+  `;
+}
+
 function speak(text) {
   if (!text || !window.speechSynthesis) return;
   window.speechSynthesis.cancel(); // stop any previous utterance
@@ -93,12 +121,31 @@ function buildTile(zone, markersByZone) {
        </p>`
     : "";
 
+  const populationNote =
+    zone.population > 0
+      ? `<p class="tile-population">~${zone.population.toLocaleString()} ${t("populationLabel")}</p>`
+      : "";
+
+  const recurrenceBlock =
+    zone.recurrence_days_observed > 0
+      ? `<div class="tile-recurrence">
+           <p>${tFormat("recurrenceTemplate", { days: zone.recurrence_poor_days, total: zone.recurrence_days_observed })}</p>
+           ${sparklineSvg(zone.sparkline_30d)}
+         </div>`
+      : "";
+
+  const facilityNote =
+    zone.schools_count || zone.hospitals_count
+      ? `<dt>${t("schoolsLabel")} / ${t("hospitalsLabel")}</dt><dd>${zone.schools_count ?? 0} / ${zone.hospitals_count ?? 0}</dd>`
+      : "";
+
   tile.innerHTML = `
     <div class="tile-summary">
       <span class="severity-dot"></span>
       <div class="tile-main">
         <div class="tile-name">${displayName(zone)}</div>
         <div class="tile-current">${t("aqiProxyLabel")} ${zone.aqi ?? "n/a"} · ${t("hotspotScoreLabel")} ${zone.hotspot_score}</div>
+        ${populationNote}
         ${staleNote}
       </div>
       <div class="tile-forecast">
@@ -110,9 +157,11 @@ function buildTile(zone, markersByZone) {
     <div class="tile-details">
       <p class="tile-action">${recommendedAction(level)}</p>
       ${briefingBlock}
+      ${recurrenceBlock}
       <dl>
         <dt>${t("firmsLabel")}</dt><dd>${zone.firms_detections}</dd>
         ${photoNote}
+        ${facilityNote}
       </dl>
     </div>
   `;
@@ -141,7 +190,19 @@ function buildTile(zone, markersByZone) {
   return tile;
 }
 
+function renderImpactBanner(hotspots) {
+  const affectedPopulation = hotspots
+    .filter((z) => (z.aqi ?? 0) > POOR_AQI_THRESHOLD)
+    .reduce((sum, z) => sum + (z.population || 0), 0);
+  const banner = document.getElementById("impact-banner");
+  banner.textContent = affectedPopulation
+    ? tFormat("headlineTemplate", { count: affectedPopulation.toLocaleString() })
+    : "";
+}
+
 function renderZones(hotspots) {
+  renderImpactBanner(hotspots);
+
   const tilesContainer = document.getElementById("zone-tiles");
   tilesContainer.innerHTML = "";
 
@@ -190,6 +251,28 @@ loadHotspots().catch((err) => {
   console.error("Failed to load hotspot data", err);
   document.getElementById("zone-tiles").innerHTML =
     '<div class="placeholder-tile">No data yet — run the pipeline (scripts/run_pipeline.py) at least once.</div>';
+});
+
+const FACILITY_ICONS = { school: "🏫", hospital: "🏥" };
+
+async function loadFacilities() {
+  const res = await fetch("data/facilities.json", { cache: "no-store" });
+  const { facilities } = await res.json();
+
+  facilities.forEach((f) => {
+    const icon = L.divIcon({
+      html: FACILITY_ICONS[f.type] ?? "📍",
+      className: "facility-icon",
+      iconSize: [18, 18],
+    });
+    L.marker([f.lat, f.lon], { icon, zIndexOffset: -100 })
+      .addTo(map)
+      .bindPopup(`<strong>${f.name}</strong>`);
+  });
+}
+
+loadFacilities().catch((err) => {
+  console.error("Failed to load facility data (non-critical, map still works):", err);
 });
 
 onLangChange(() => {

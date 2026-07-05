@@ -15,6 +15,12 @@ AQI_WEIGHT = 0.5
 FIRMS_WEIGHT = 0.3
 PHOTO_WEIGHT = 0.2
 
+# CPCB's public "Poor" AQI category starts at 201 -- a recognizable, citable
+# threshold for "how many days was this genuinely bad," rather than an
+# arbitrary internal cutoff.
+POOR_AQI_THRESHOLD = 200
+RECURRENCE_WINDOW_DAYS = 30
+
 
 def load_json(path: Path, default):
     if not path.exists():
@@ -68,11 +74,42 @@ def last_known_aqi(zone_id):
     return None, None
 
 
+def daily_aqi_series(zone_id, days=RECURRENCE_WINDOW_DAYS):
+    """
+    Aggregates history entries (a mix of ~3-hourly live points and daily
+    backfill points -- see append_history.py / backfill_history.py) down to
+    one average-AQI point per calendar day, so live and backfilled data are
+    comparable on the same daily granularity.
+    """
+    history = load_json(PROCESSED_DIR / f"history_{zone_id}.json", [])
+    by_day = {}
+    for entry in history:
+        if entry.get("aqi") is None:
+            continue
+        day = entry["timestamp"][:10]  # "YYYY-MM-DDT..." -> "YYYY-MM-DD"
+        by_day.setdefault(day, []).append(entry["aqi"])
+
+    daily_avgs = {day: sum(vals) / len(vals) for day, vals in by_day.items()}
+    recent_days = sorted(daily_avgs)[-days:]
+    return [round(daily_avgs[d], 1) for d in recent_days]
+
+
+def recurrence_stats(zone_id):
+    series = daily_aqi_series(zone_id)
+    poor_days = sum(1 for v in series if v > POOR_AQI_THRESHOLD)
+    return {
+        "recurrence_days_observed": len(series),
+        "recurrence_poor_days": poor_days,
+        "sparkline_30d": series,
+    }
+
+
 def fuse():
     zones = load_zones()
     cpcb_records = load_json(RAW_DIR / "cpcb_latest.json", [])
     firms_rows = load_firms_csv(RAW_DIR / "firms_latest.csv")
     photo_scores = load_json(PROCESSED_DIR / "photo_severity.json", {})
+    facilities = load_json(PROCESSED_DIR / "facilities.json", {})
 
     cpcb_by_station = {r.get("station"): r for r in cpcb_records}
 
@@ -102,6 +139,7 @@ def fuse():
                 "name_hi": zone.get("name_hi", zone["name"]),
                 "lat": zone["lat"],
                 "lon": zone["lon"],
+                "population": zone.get("population", 0),
                 "aqi": aqi,
                 "aqi_stale": aqi_stale,
                 "aqi_as_of": aqi_as_of,
@@ -110,6 +148,9 @@ def fuse():
                 "photo_count": photo_entry.get("count", 0),
                 "photo_type": photo_entry.get("type", "none"),
                 "hotspot_score": round(hotspot_score, 3),
+                **recurrence_stats(zone["id"]),
+                "schools_count": facilities.get(zone["id"], {}).get("schools_count", 0),
+                "hospitals_count": facilities.get(zone["id"], {}).get("hospitals_count", 0),
             }
         )
 

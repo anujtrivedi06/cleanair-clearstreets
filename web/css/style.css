@@ -54,6 +54,15 @@ main { display: flex; height: calc(100vh - 72px); }
 }
 .panel-header h2 { margin: 0; font-size: 1.1rem; }
 .panel-subtitle { font-size: 0.78rem; color: #888; }
+#impact-banner:not(:empty) {
+  margin-top: 0.6rem;
+  padding: 0.5rem 0.7rem;
+  background: #1b1f23;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
 
 #zone-tiles { padding: 0.5rem 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; }
 
@@ -89,6 +98,7 @@ main { display: flex; height: calc(100vh - 72px); }
 .tile-main { flex: 1; min-width: 0; }
 .tile-name { font-weight: 600; font-size: 0.92rem; }
 .tile-current { font-size: 0.78rem; color: #666; margin-top: 0.1rem; }
+.tile-population { font-size: 0.72rem; color: #888; margin: 0.1rem 0 0; }
 .stale-note { display: block; font-size: 0.7rem; color: #a8710a; margin-top: 0.15rem; }
 
 .tile-forecast {
@@ -166,6 +176,12 @@ main { display: flex; height: calc(100vh - 72px); }
 .tile-details dt { color: #888; }
 .tile-details dd { margin: 0; text-align: right; }
 
+.tile-recurrence { margin: 0 0 0.6rem; }
+.tile-recurrence p { margin: 0 0 0.25rem; font-size: 0.76rem; color: #555; }
+.sparkline { width: 100%; height: 34px; display: block; }
+.sparkline-line { fill: none; stroke: #1a73e8; stroke-width: 1.5; }
+.sparkline-threshold { stroke: #d0342c; stroke-width: 1; stroke-dasharray: 3 2; }
+
 /* ---------- Report section (right-hand column) ---------- */
 
 #report-section {
@@ -211,3 +227,12 @@ main { display: flex; height: calc(100vh - 72px); }
   cursor: pointer;
 }
 #classification-result { margin-top: 0.6rem; font-size: 0.85rem; }
+
+/* ---------- Vulnerable-facility markers (schools/hospitals) ---------- */
+
+.facility-icon {
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff);
+}

@@ -1,0 +1,830 @@
+{
+  "anand_vihar": {
+    "schools_count": 2,
+    "hospitals_count": 1,
+    "facilities": [
+      {
+        "type": "hospital",
+        "name": "Pushpanjali Medical Centre",
+        "lat": 28.6540075,
+        "lon": 77.3090007
+      },
+      {
+        "type": "school",
+        "name": "GD Goenka School",
+        "lat": 28.6473026,
+        "lon": 77.3063485
+      },
+      {
+        "type": "school",
+        "name": "Shaheed Rajpal DAV Public School",
+        "lat": 28.6470699,
+        "lon": 77.3047694
+      }
+    ]
+  },
+  "rk_puram": {
+    "schools_count": 6,
+    "hospitals_count": 5,
+    "facilities": [
+      {
+        "type": "school",
+        "name": "DPS International School",
+        "lat": 28.5697886,
+        "lon": 77.1783234
+      },
+      {
+        "type": "school",
+        "name": "Jose Martin Sarvodya Vidyalya",
+        "lat": 28.5712962,
+        "lon": 77.1781517
+      },
+      {
+        "type": "hospital",
+        "name": "CGHS Dispensery, R K Puram",
+        "lat": 28.5629319,
+        "lon": 77.1791219
+      },
+      {
+        "type": "hospital",
+        "name": "CGHS Dispensary R.K.Puram Sec-12",
+        "lat": 28.5733539,
+        "lon": 77.1760096
+      },
+      {
+        "type": "hospital",
+        "name": "CGHS Wellness Centre R.K.Puram Sec-6",
+        "lat": 28.5652408,
+        "lon": 77.1735025
+      },
+      {
+        "type": "school",
+        "name": "Kendriya Vidyalaya",
+        "lat": 28.5610558,
+        "lon": 77.1779814
+      },
+      {
+        "type": "school",
+        "name": "Delhi Public School",
+        "lat": 28.5719972,
+        "lon": 77.1762291
+      },
+      {
+        "type": "school",
+        "name": "School",
+        "lat": 28.5717751,
+        "lon": 77.1778302
+      },
+      {
+        "type": "school",
+        "name": "Kendriya Vidyalaya, RK Puram, Sector-2",
+        "lat": 28.56249,
+        "lon": 77.1860721
+      },
+      {
+        "type": "hospital",
+        "name": "C.G.H.S. Maternity & Gynae Hospital",
+        "lat": 28.5655017,
+        "lon": 77.1768786
+      },
+      {
+        "type": "hospital",
+        "name": "CGHS Dispensary R.K.Puram sec-2",
+        "lat": 28.5579605,
+        "lon": 77.1832312
+      }
+    ]
+  },
+  "punjabi_bagh": {
+    "schools_count": 7,
+    "hospitals_count": 9,
+    "facilities": [
+      {
+        "type": "hospital",
+        "name": "MGS Hospital",
+        "lat": 28.6739027,
+        "lon": 77.1346394
+      },
+      {
+        "type": "hospital",
+        "name": "Maharaja Agrasen Hospital",
+        "lat": 28.6740586,
+        "lon": 77.1340566
+      },
+      {
+        "type": "school",
+        "name": "Guru Nanak Public School",
+        "lat": 28.6699013,
+        "lon": 77.1326211
+      },
+      {
+        "type": "school",
+        "name": "S M Arya Public School",
+        "lat": 28.6721011,
+        "lon": 77.1337166
+      },
+      {
+        "type": "school",
+        "name": "SD Public School",
+        "lat": 28.6677379,
+        "lon": 77.1393322
+      },
+      {
+        "type": "school",
+        "name": "Government Higher Secondary School",
+        "lat": 28.6739957,
+        "lon": 77.1271291
+      },
+      {
+        "type": "school",
+        "name": "NC Jindal Public School",
+        "lat": 28.6628679,
+        "lon": 77.124514
+      },
+      {
+        "type": "hospital",
+        "name": "Mehra Hospital",
+        "lat": 28.6711074,
+        "lon": 77.1276492
+      },
+      {
+        "type": "hospital",
+        "name": "Shri Mahant Gurmukh Singhji Charitable Hospital",
+        "lat": 28.6739475,
+        "lon": 77.1352525
+      },
+      {
+        "type": "hospital",
+        "name": "Sumitra Hospital",
+        "lat": 28.6734516,
+        "lon": 77.1240716
+      },
+      {
+        "type": "hospital",
+        "name": "Gaudham Cancer Ayurvedic Treatment & Research Center",
+        "lat": 28.67286,
+        "lon": 77.130852
+      },
+      {
+        "type": "school",
+        "name": "School",
+        "lat": 28.6662531,
+        "lon": 77.1408637
+      },
+      {
+        "type": "school",
+        "name": "School",
+        "lat": 28.6625155,
+        "lon": 77.1376662
+      },
+      {
+        "type": "hospital",
+        "name": "Dhanvantari Ayurvedic Hospital",
+        "lat": 28.6706874,
+        "lon": 77.1255169
+      },
+      {
+        "type": "hospital",
+        "name": "SPUHC Sudharshan park",
+        "lat": 28.6633633,
+        "lon": 77.1314031
+      },
+      {
+        "type": "hospital",
+        "name": "Birla Fertility & IVF",
+        "lat": 28.6677029,
+        "lon": 77.1319812
+      }
+    ]
+  },
+  "ito": {
+    "schools_count": 2,
+    "hospitals_count": 0,
+    "facilities": [
+      {
+        "type": "school",
+        "name": "School of planning and architecure",
+        "lat": 28.6326109,
+        "lon": 77.2459805
+      },
+      {
+        "type": "school",
+        "name": "Govt. Lady Noyce Senior Secondary School",
+        "lat": 28.6384252,
+        "lon": 77.2448902
+      }
+    ]
+  },
+  "dwarka": {
+    "schools_count": 2,
+    "hospitals_count": 3,
+    "facilities": [
+      {
+        "type": "hospital",
+        "name": "DGD Raj Nagar II",
+        "lat": 28.5728016,
+        "lon": 77.0765067
+      },
+      {
+        "type": "hospital",
+        "name": "SITE",
+        "lat": 28.5764608,
+        "lon": 77.0675724
+      },
+      {
+        "type": "school",
+        "name": "Queens Valley School",
+        "lat": 28.5781889,
+        "lon": 77.0717681
+      },
+      {
+        "type": "hospital",
+        "name": "SITE BOUNDARY",
+        "lat": 28.5767769,
+        "lon": 77.0675661
+      },
+      {
+        "type": "school",
+        "name": "Global Pratibha International School",
+        "lat": 28.5731309,
+        "lon": 77.0737975
+      }
+    ]
+  },
+  "rohini": {
+    "schools_count": 15,
+    "hospitals_count": 9,
+    "facilities": [
+      {
+        "type": "school",
+        "name": "Government school",
+        "lat": 28.7369367,
+        "lon": 77.126039
+      },
+      {
+        "type": "school",
+        "name": "BCC Model School",
+        "lat": 28.7396725,
+        "lon": 77.1193927
+      },
+      {
+        "type": "school",
+        "name": "Snehil Frontline Special School",
+        "lat": 28.7397795,
+        "lon": 77.1195329
+      },
+      {
+        "type": "school",
+        "name": "Kids Temple Public School",
+        "lat": 28.7385379,
+        "lon": 77.1214922
+      },
+      {
+        "type": "school",
+        "name": "Alok Bharti Public School",
+        "lat": 28.7364974,
+        "lon": 77.128777
+      },
+      {
+        "type": "hospital",
+        "name": "Channi Devi Goyal Memorial Medical Centre",
+        "lat": 28.7403173,
+        "lon": 77.1215558
+      },
+      {
+        "type": "school",
+        "name": "Delhi International Public School",
+        "lat": 28.7367974,
+        "lon": 77.1291872
+      },
+      {
+        "type": "school",
+        "name": "Rockfield Public School",
+        "lat": 28.734744,
+        "lon": 77.1248235
+      },
+      {
+        "type": "school",
+        "name": "Ryan Shalom Montessori",
+        "lat": 28.7346232,
+        "lon": 77.1241352
+      },
+      {
+        "type": "hospital",
+        "name": "Children & Maternity Centre",
+        "lat": 28.7334154,
+        "lon": 77.1261114
+      },
+      {
+        "type": "hospital",
+        "name": "Sai Drishti Maternity Centre",
+        "lat": 28.7313713,
+        "lon": 77.1251957
+      },
+      {
+        "type": "hospital",
+        "name": "Golden Health Care Center",
+        "lat": 28.7374894,
+        "lon": 77.1187302
+      },
+      {
+        "type": "hospital",
+        "name": "Jackson Hospital & Research Centre",
+        "lat": 28.7375325,
+        "lon": 77.121294
+      },
+      {
+        "type": "school",
+        "name": "MCD school",
+        "lat": 28.7330379,
+        "lon": 77.1286156
+      },
+      {
+        "type": "hospital",
+        "name": "ESIC Hospital",
+        "lat": 28.7273448,
+        "lon": 77.126818
+      },
+      {
+        "type": "hospital",
+        "name": "Asha Clinic",
+        "lat": 28.7367983,
+        "lon": 77.1107394
+      },
+      {
+        "type": "school",
+        "name": "School",
+        "lat": 28.735632,
+        "lon": 77.1104103
+      },
+      {
+        "type": "school",
+        "name": "School",
+        "lat": 28.7304814,
+        "lon": 77.1150091
+      },
+      {
+        "type": "school",
+        "name": "School",
+        "lat": 28.7328474,
+        "lon": 77.111686
+      },
+      {
+        "type": "hospital",
+        "name": "ESI Hospital, Rohini",
+        "lat": 28.7279282,
+        "lon": 77.1257748
+      },
+      {
+        "type": "school",
+        "name": "Vidya Bharti School",
+        "lat": 28.7330971,
+        "lon": 77.1293691
+      },
+      {
+        "type": "school",
+        "name": "St Angel's School",
+        "lat": 28.7298314,
+        "lon": 77.1290946
+      },
+      {
+        "type": "hospital",
+        "name": "Sant Soham Hospital",
+        "lat": 28.7355881,
+        "lon": 77.112955
+      },
+      {
+        "type": "school",
+        "name": "Delhi International Junior School",
+        "lat": 28.7353866,
+        "lon": 77.1109687
+      }
+    ]
+  },
+  "okhla": {
+    "schools_count": 3,
+    "hospitals_count": 1,
+    "facilities": [
+      {
+        "type": "hospital",
+        "name": "Vallabh Hospital",
+        "lat": 28.5323573,
+        "lon": 77.2659687
+      },
+      {
+        "type": "school",
+        "name": "Deepalaya",
+        "lat": 28.5301323,
+        "lon": 77.2676661
+      },
+      {
+        "type": "school",
+        "name": "School",
+        "lat": 28.5319663,
+        "lon": 77.2671318
+      },
+      {
+        "type": "school",
+        "name": "Government Boys Girls Senior Secondary School",
+        "lat": 28.5444437,
+        "lon": 77.2768472
+      }
+    ]
+  },
+  "wazirpur": {
+    "schools_count": 7,
+    "hospitals_count": 7,
+    "facilities": [
+      {
+        "type": "school",
+        "name": "Kendrya Vidyalya",
+        "lat": 28.7051428,
+        "lon": 77.1699743
+      },
+      {
+        "type": "hospital",
+        "name": "Dr BD Attam Hospital and Medical Research Centre",
+        "lat": 28.6960546,
+        "lon": 77.1734959
+      },
+      {
+        "type": "hospital",
+        "name": "ESI Dispensary, Wazirpur Industrial Area",
+        "lat": 28.6998341,
+        "lon": 77.1633685
+      },
+      {
+        "type": "hospital",
+        "name": "Kesar Hospital",
+        "lat": 28.7059502,
+        "lon": 77.1644781
+      },
+      {
+        "type": "hospital",
+        "name": "Kumar Medical & Maternity Centre",
+        "lat": 28.7041641,
+        "lon": 77.160742
+      },
+      {
+        "type": "hospital",
+        "name": "DGD Shalimar Bagh AC1",
+        "lat": 28.7057699,
+        "lon": 77.1701289
+      },
+      {
+        "type": "hospital",
+        "name": "D.R. Nursing Home",
+        "lat": 28.6963486,
+        "lon": 77.1730105
+      },
+      {
+        "type": "school",
+        "name": "My Play School",
+        "lat": 28.7072002,
+        "lon": 77.159657
+      },
+      {
+        "type": "school",
+        "name": "Government Boys and Girls School",
+        "lat": 28.6921673,
+        "lon": 77.1669431
+      },
+      {
+        "type": "school",
+        "name": "School",
+        "lat": 28.7055986,
+        "lon": 77.157158
+      },
+      {
+        "type": "school",
+        "name": "School",
+        "lat": 28.7056895,
+        "lon": 77.1599644
+      },
+      {
+        "type": "school",
+        "name": "School",
+        "lat": 28.7067387,
+        "lon": 77.1647956
+      },
+      {
+        "type": "hospital",
+        "name": "Maharaja Agarsain Hospital (Charitable)",
+        "lat": 28.6916204,
+        "lon": 77.1647714
+      },
+      {
+        "type": "school",
+        "name": "Kendriya Vidyalaya",
+        "lat": 28.704872,
+        "lon": 77.1704576
+      }
+    ]
+  },
+  "vivek_vihar": {
+    "schools_count": 13,
+    "hospitals_count": 10,
+    "facilities": [
+      {
+        "type": "hospital",
+        "name": "Tirath Ram Hospital",
+        "lat": 28.666922,
+        "lon": 77.3178057
+      },
+      {
+        "type": "hospital",
+        "name": "IG ESI Hospital",
+        "lat": 28.6665856,
+        "lon": 77.3111297
+      },
+      {
+        "type": "hospital",
+        "name": "Red Cross Hospital Society Mat. Welfare and Child Care Hospital",
+        "lat": 28.678117,
+        "lon": 77.3225828
+      },
+      {
+        "type": "hospital",
+        "name": "Tondan hospital",
+        "lat": 28.6664871,
+        "lon": 77.3207024
+      },
+      {
+        "type": "hospital",
+        "name": "DGD Jhilmil",
+        "lat": 28.6707889,
+        "lon": 77.3117511
+      },
+      {
+        "type": "hospital",
+        "name": "DGD Vivek Vihar",
+        "lat": 28.6696193,
+        "lon": 77.3190619
+      },
+      {
+        "type": "school",
+        "name": "Sarvodaya Kanya Vidyalaya",
+        "lat": 28.6807221,
+        "lon": 77.3126495
+      },
+      {
+        "type": "school",
+        "name": "East Delhi M.C Primary School",
+        "lat": 28.6787962,
+        "lon": 77.3088704
+      },
+      {
+        "type": "school",
+        "name": "Govt Boys Senior Secondary School",
+        "lat": 28.6807704,
+        "lon": 77.3127674
+      },
+      {
+        "type": "school",
+        "name": "G.G.S.S.S. VIVEK VIHAR PHASE 2",
+        "lat": 28.6696109,
+        "lon": 77.3073786
+      },
+      {
+        "type": "school",
+        "name": "Avinash Chandra Chadha Central Savoday Bal School",
+        "lat": 28.6696109,
+        "lon": 77.3073786
+      },
+      {
+        "type": "school",
+        "name": "Govt. Boys Secondary School",
+        "lat": 28.6698721,
+        "lon": 77.3094983
+      },
+      {
+        "type": "school",
+        "name": "Greenway Modern School",
+        "lat": 28.6699213,
+        "lon": 77.3090614
+      },
+      {
+        "type": "school",
+        "name": "RAJKIYA PRATIBHA VIKAS VIDYALAYA",
+        "lat": 28.6660091,
+        "lon": 77.3087445
+      },
+      {
+        "type": "school",
+        "name": "DR. B.R. AMBEDKAR SCHOOL OF DPECIALISED EXCELLENCE",
+        "lat": 28.6658495,
+        "lon": 77.309429
+      },
+      {
+        "type": "hospital",
+        "name": "IndraGandhi ESI HOSPITAL",
+        "lat": 28.6665679,
+        "lon": 77.3110943
+      },
+      {
+        "type": "school",
+        "name": "School",
+        "lat": 28.6698219,
+        "lon": 77.3203094
+      },
+      {
+        "type": "hospital",
+        "name": "Hospital",
+        "lat": 28.666886,
+        "lon": 77.3115102
+      },
+      {
+        "type": "hospital",
+        "name": "CGHS Dishad Garden",
+        "lat": 28.6808693,
+        "lon": 77.31389
+      },
+      {
+        "type": "hospital",
+        "name": "DGD Dilshad Garden",
+        "lat": 28.6802874,
+        "lon": 77.3132828
+      },
+      {
+        "type": "school",
+        "name": "Arwachin International School",
+        "lat": 28.6790189,
+        "lon": 77.3157781
+      },
+      {
+        "type": "school",
+        "name": "Govt. Girls Senior Secondary School",
+        "lat": 28.6689103,
+        "lon": 77.3054117
+      },
+      {
+        "type": "school",
+        "name": "PM Shri Central School",
+        "lat": 28.6655773,
+        "lon": 77.3079938
+      }
+    ]
+  },
+  "noida_sec62": {
+    "schools_count": 2,
+    "hospitals_count": 2,
+    "facilities": [
+      {
+        "type": "hospital",
+        "name": "Aditya Orthopaedics Clinic",
+        "lat": 28.6347048,
+        "lon": 77.3641493
+      },
+      {
+        "type": "school",
+        "name": "Vivekanand Global School",
+        "lat": 28.6337909,
+        "lon": 77.3596137
+      },
+      {
+        "type": "school",
+        "name": "Vivekanand Global School",
+        "lat": 28.6348082,
+        "lon": 77.3598223
+      },
+      {
+        "type": "hospital",
+        "name": "Apollo Clinic",
+        "lat": 28.6354868,
+        "lon": 77.3611181
+      }
+    ]
+  },
+  "gurugram_sec51": {
+    "schools_count": 4,
+    "hospitals_count": 2,
+    "facilities": [
+      {
+        "type": "school",
+        "name": "St. Angels (Jr)",
+        "lat": 28.4469205,
+        "lon": 77.0651743
+      },
+      {
+        "type": "school",
+        "name": "St. Angels (Sr)",
+        "lat": 28.4419185,
+        "lon": 77.0695058
+      },
+      {
+        "type": "hospital",
+        "name": "360 Wellness Clinic",
+        "lat": 28.4369455,
+        "lon": 77.0677093
+      },
+      {
+        "type": "hospital",
+        "name": "Verizon Hospital",
+        "lat": 28.4399865,
+        "lon": 77.0705
+      },
+      {
+        "type": "school",
+        "name": "Delhi Public School",
+        "lat": 28.441745,
+        "lon": 77.0645962
+      },
+      {
+        "type": "school",
+        "name": "GAV International School",
+        "lat": 28.4334785,
+        "lon": 77.0721018
+      }
+    ]
+  },
+  "ghaziabad_sanjay_nagar": {
+    "schools_count": 1,
+    "hospitals_count": 13,
+    "facilities": [
+      {
+        "type": "hospital",
+        "name": "Vardan Eye Hospital, Ghaziabad",
+        "lat": 28.6865836,
+        "lon": 77.4460183
+      },
+      {
+        "type": "hospital",
+        "name": "Pulmonic Hospital",
+        "lat": 28.6865262,
+        "lon": 77.450742
+      },
+      {
+        "type": "hospital",
+        "name": "Sharnam Eye Centre and Laser Services",
+        "lat": 28.6805275,
+        "lon": 77.4530001
+      },
+      {
+        "type": "hospital",
+        "name": "Shri Raghuwar Shyam Hospital and Research Centre Pvt. Ltd.",
+        "lat": 28.6818957,
+        "lon": 77.4442175
+      },
+      {
+        "type": "hospital",
+        "name": "Gargi Hospital - Ghaziabad",
+        "lat": 28.6831687,
+        "lon": 77.4492252
+      },
+      {
+        "type": "hospital",
+        "name": "Sharma Nursing Home, Ghaziabad",
+        "lat": 28.6911391,
+        "lon": 77.4515803
+      },
+      {
+        "type": "hospital",
+        "name": "Agrawal Maternity and Nursing home",
+        "lat": 28.6827835,
+        "lon": 77.4526592
+      },
+      {
+        "type": "hospital",
+        "name": "Vijay Clinic and Maternity Centre",
+        "lat": 28.6911643,
+        "lon": 77.4525958
+      },
+      {
+        "type": "hospital",
+        "name": "Dr. Sanjeev Anand Clinic",
+        "lat": 28.6786419,
+        "lon": 77.4508835
+      },
+      {
+        "type": "hospital",
+        "name": "District Hospital, Ghaziabad",
+        "lat": 28.6890065,
+        "lon": 77.456156
+      },
+      {
+        "type": "hospital",
+        "name": "District combind hospital sanjay nagar",
+        "lat": 28.6859053,
+        "lon": 77.4541484
+      },
+      {
+        "type": "school",
+        "name": "Ingraham",
+        "lat": 28.6749057,
+        "lon": 77.4528689
+      },
+      {
+        "type": "hospital",
+        "name": "Hospital",
+        "lat": 28.6780186,
+        "lon": 77.4602857
+      },
+      {
+        "type": "hospital",
+        "name": "Yashoda Superspeciality Hospital & Cancer Institute",
+        "lat": 28.6877617,
+        "lon": 77.4511697
+      }
+    ]
+  }
+}

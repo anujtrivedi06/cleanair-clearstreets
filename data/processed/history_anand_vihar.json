@@ -670,10 +670,17 @@
     "source": "cpcb_live"
   },
   {
-    "timestamp": "2026-07-05T11:02:12.880760+00:00",
+    "timestamp": "2026-07-05T11:06:54.822570+00:00",
     "aqi": 211.0,
-    "wind_speed": 4.8,
-    "humidity": 61,
+    "wind_speed": 2.2,
+    "humidity": 47,
+    "source": "cpcb_live"
+  },
+  {
+    "timestamp": "2026-07-05T12:35:35.953863+00:00",
+    "aqi": 203.5,
+    "wind_speed": 6.3,
+    "humidity": 62,
     "source": "cpcb_live"
   }
 ]
