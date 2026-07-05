@@ -35,6 +35,12 @@ FIRMS_MAP_KEY = os.environ.get("FIRMS_MAP_KEY", "")
 # sharing the same tight daily quota.
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
+# Groq — free-tier fallback for zone briefings if Gemini's daily quota (20
+# requests/day/model on this project) is exhausted, e.g. from repeated manual
+# demo-day triggers. Hosts open-source models (Llama, Gemma) with a much
+# higher free-tier ceiling. Get a free key at https://console.groq.com/keys
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+
 # Firestore -- stores citizen photo reports (public create, backend-only read;
 # see firestore.rules). Backend access uses a service-account key, which
 # bypasses security rules entirely, so it can read what the public API can't.

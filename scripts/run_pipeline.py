@@ -40,9 +40,11 @@ def carry_forward_briefings(hotspots):
     if not existing_path.exists():
         return hotspots
     with open(existing_path, encoding="utf-8") as f:
-        existing = {h["zone_id"]: h.get("ai_briefing") for h in json.load(f).get("hotspots", [])}
+        existing = {h["zone_id"]: h for h in json.load(f).get("hotspots", [])}
     for h in hotspots:
-        h["ai_briefing"] = existing.get(h["zone_id"])
+        prev = existing.get(h["zone_id"], {})
+        h["ai_briefing"] = prev.get("ai_briefing")
+        h["ai_briefing_source"] = prev.get("ai_briefing_source")
     return hotspots
 
 

@@ -1,17 +1,19 @@
 """
 Generates a one-sentence AI situational briefing per zone using Gemini
 (server-side call -- see config.py for why this key never touches the
-browser). We compute the historical comparison (7-day / 30-day average AQI)
-ourselves with plain arithmetic -- LLMs are unreliable at math -- and only
-ask Gemini to reason about likely cause and write the natural-language
-summary. That keeps the AI doing synthesis/reasoning work, not decoration.
+browser), falling back to Groq (free-tier, open-source models) if Gemini's
+daily quota is exhausted -- e.g. from repeated manual demo-day triggers. We
+compute the historical comparison (7-day / 30-day average AQI) ourselves
+with plain arithmetic -- LLMs are unreliable at math -- and only ask the
+model to reason about likely cause and write the natural-language summary.
+That keeps the AI doing synthesis/reasoning work, not decoration.
 """
 import statistics
 import time
 
 import requests
 
-from config import DEFAULT_HEADERS, GEMINI_API_KEY, PROCESSED_DIR
+from config import DEFAULT_HEADERS, GEMINI_API_KEY, GROQ_API_KEY, PROCESSED_DIR
 from fuse_hotspots import load_json
 
 # Deliberately NOT gemini-2.5-flash: that model's free tier is capped at 20
@@ -21,6 +23,9 @@ from fuse_hotspots import load_json
 # with citizen submissions for the same daily budget.
 GEMINI_MODEL = "gemini-2.5-flash-lite"
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+
+GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 BRIEFING_PROMPT_TEMPLATE = """You are writing a one-sentence situational briefing for a municipal
 official about air quality in {zone_name}, Delhi NCR.
@@ -63,6 +68,15 @@ def call_gemini(prompt, max_retries=3):
         return data["candidates"][0]["content"]["parts"][0]["text"].strip()
 
 
+def call_groq(prompt):
+    headers = {**DEFAULT_HEADERS, "Authorization": f"Bearer {GROQ_API_KEY}"}
+    body = {"model": GROQ_MODEL, "messages": [{"role": "user", "content": prompt}]}
+    resp = requests.post(GROQ_URL, json=body, headers=headers, timeout=30)
+    resp.raise_for_status()
+    data = resp.json()
+    return data["choices"][0]["message"]["content"].strip()
+
+
 def briefing_for_zone(hotspot):
     avg_7d, avg_30d = historical_averages(hotspot["zone_id"])
     prompt = BRIEFING_PROMPT_TEMPLATE.format(
@@ -76,15 +90,22 @@ def briefing_for_zone(hotspot):
         photo_severity=hotspot.get("photo_severity", 0),
         photo_type=hotspot.get("photo_type", "none"),
     )
-    return call_gemini(prompt)
+    try:
+        return call_gemini(prompt), "gemini"
+    except Exception as e:
+        print(f"[warn] Gemini briefing failed for {hotspot['zone_id']}, trying Groq fallback: {e}")
+        return call_groq(prompt), "groq"
 
 
 def add_briefings(hotspots):
     for hotspot in hotspots:
         try:
-            hotspot["ai_briefing"] = briefing_for_zone(hotspot)
+            briefing, source = briefing_for_zone(hotspot)
+            hotspot["ai_briefing"] = briefing
+            hotspot["ai_briefing_source"] = source
         except Exception as e:
-            print(f"[warn] briefing failed for {hotspot['zone_id']}: {e}")
+            print(f"[warn] briefing failed for {hotspot['zone_id']} on both providers: {e}")
             hotspot["ai_briefing"] = None
+            hotspot["ai_briefing_source"] = None
         time.sleep(4)  # stay comfortably under free-tier RPM limits
     return hotspots
