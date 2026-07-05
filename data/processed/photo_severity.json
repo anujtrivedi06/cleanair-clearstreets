@@ -5,6 +5,11 @@
     "type": "smoke"
   },
   "wazirpur": {
+    "severity": 0.9,
+    "count": 3,
+    "type": "garbage_burning"
+  },
+  "rk_puram": {
     "severity": 0.8,
     "count": 1,
     "type": "smoke"

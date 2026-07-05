@@ -1,17 +1,17 @@
 {
   "zones": [
-    { "id": "anand_vihar", "name": "Anand Vihar", "lat": 28.6469, "lon": 77.3152, "cpcb_station": "Anand Vihar, Delhi - DPCC" },
-    { "id": "rk_puram", "name": "R.K. Puram", "lat": 28.5644, "lon": 77.1770, "cpcb_station": "R K Puram, Delhi - DPCC" },
-    { "id": "punjabi_bagh", "name": "Punjabi Bagh", "lat": 28.6692, "lon": 77.1310, "cpcb_station": "Punjabi Bagh, Delhi - DPCC" },
-    { "id": "ito", "name": "ITO", "lat": 28.6304, "lon": 77.2497, "cpcb_station": "ITO, Delhi - CPCB" },
-    { "id": "dwarka", "name": "Dwarka Sector 8", "lat": 28.5710, "lon": 77.0720, "cpcb_station": "Dwarka-Sector 8, Delhi - DPCC" },
-    { "id": "rohini", "name": "Rohini", "lat": 28.7330, "lon": 77.1200, "cpcb_station": "Rohini, Delhi - DPCC" },
-    { "id": "okhla", "name": "Okhla Phase 2", "lat": 28.5355, "lon": 77.2726, "cpcb_station": "Okhla Phase-2, Delhi - DPCC" },
-    { "id": "wazirpur", "name": "Wazirpur", "lat": 28.6997, "lon": 77.1650, "cpcb_station": "Wazirpur, Delhi - DPCC" },
-    { "id": "vivek_vihar", "name": "Vivek Vihar", "lat": 28.6725, "lon": 77.3151, "cpcb_station": "Vivek Vihar, Delhi - DPCC" },
-    { "id": "noida_sec62", "name": "Noida Sector 62", "lat": 28.6274, "lon": 77.3630, "cpcb_station": "Sector - 62, Noida - IITM" },
-    { "id": "gurugram_sec51", "name": "Gurugram Sector 51", "lat": 28.4425, "lon": 77.0722, "cpcb_station": "Sector-51, Gurugram - HSPCB" },
-    { "id": "ghaziabad_sanjay_nagar", "name": "Ghaziabad Sanjay Nagar", "lat": 28.6825, "lon": 77.4519, "cpcb_station": "Sanjay Nagar, Ghaziabad - UPPCB" }
+    { "id": "anand_vihar", "name": "Anand Vihar", "name_hi": "आनंद विहार", "lat": 28.6469, "lon": 77.3152, "cpcb_station": "Anand Vihar, Delhi - DPCC" },
+    { "id": "rk_puram", "name": "R.K. Puram", "name_hi": "आर.के. पुरम", "lat": 28.5644, "lon": 77.1770, "cpcb_station": "R K Puram, Delhi - DPCC" },
+    { "id": "punjabi_bagh", "name": "Punjabi Bagh", "name_hi": "पंजाबी बाग", "lat": 28.6692, "lon": 77.1310, "cpcb_station": "Punjabi Bagh, Delhi - DPCC" },
+    { "id": "ito", "name": "ITO", "name_hi": "आईटीओ", "lat": 28.6304, "lon": 77.2497, "cpcb_station": "ITO, Delhi - CPCB" },
+    { "id": "dwarka", "name": "Dwarka Sector 8", "name_hi": "द्वारका सेक्टर 8", "lat": 28.5710, "lon": 77.0720, "cpcb_station": "Dwarka-Sector 8, Delhi - DPCC" },
+    { "id": "rohini", "name": "Rohini", "name_hi": "रोहिणी", "lat": 28.7330, "lon": 77.1200, "cpcb_station": "Rohini, Delhi - DPCC" },
+    { "id": "okhla", "name": "Okhla Phase 2", "name_hi": "ओखला फेज़ 2", "lat": 28.5355, "lon": 77.2726, "cpcb_station": "Okhla Phase-2, Delhi - DPCC" },
+    { "id": "wazirpur", "name": "Wazirpur", "name_hi": "वज़ीरपुर", "lat": 28.6997, "lon": 77.1650, "cpcb_station": "Wazirpur, Delhi - DPCC" },
+    { "id": "vivek_vihar", "name": "Vivek Vihar", "name_hi": "विवेक विहार", "lat": 28.6725, "lon": 77.3151, "cpcb_station": "Vivek Vihar, Delhi - DPCC" },
+    { "id": "noida_sec62", "name": "Noida Sector 62", "name_hi": "नोएडा सेक्टर 62", "lat": 28.6274, "lon": 77.3630, "cpcb_station": "Sector - 62, Noida - IITM" },
+    { "id": "gurugram_sec51", "name": "Gurugram Sector 51", "name_hi": "गुरुग्राम सेक्टर 51", "lat": 28.4425, "lon": 77.0722, "cpcb_station": "Sector-51, Gurugram - HSPCB" },
+    { "id": "ghaziabad_sanjay_nagar", "name": "Ghaziabad Sanjay Nagar", "name_hi": "ग़ाज़ियाबाद संजय नगर", "lat": 28.6825, "lon": 77.4519, "cpcb_station": "Sanjay Nagar, Ghaziabad - UPPCB" }
   ],
   "notes": "Zone list = subset of active CPCB/DPCC/HSPCB/UPPCB monitoring stations across Delhi NCR, used both as the spatial grid for hotspot fusion and as the query key for CPCB station-wise historical data. Verify exact station names against the data.gov.in resource before Day 1 pull -- names vary slightly across releases."
 }

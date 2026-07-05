@@ -76,6 +76,7 @@ def fuse():
             {
                 "zone_id": zone["id"],
                 "name": zone["name"],
+                "name_hi": zone.get("name_hi", zone["name"]),
                 "lat": zone["lat"],
                 "lon": zone["lon"],
                 "aqi": cpcb.get("pollutant_avg"),

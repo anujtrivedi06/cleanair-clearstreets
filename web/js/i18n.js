@@ -22,6 +22,13 @@ export const translations = {
     actionModerate: "Schedule inspection within 24h",
     actionLow: "Monitor",
     loading: "Loading hotspot data…",
+    aqiProxyLabel: "AQI proxy",
+    hotspotScoreLabel: "hotspot score",
+    severityLabel: "severity",
+    popupHotspotScore: "Hotspot score",
+    popupAqi: "AQI",
+    popupPredicted: "Predicted 24h AQI",
+    listenLabel: "Listen",
   },
   hi: {
     subtitle: "लाइव प्रदूषण हॉटस्पॉट और 24 घंटे का पूर्वानुमान — दिल्ली एनसीआर",
@@ -40,6 +47,13 @@ export const translations = {
     actionModerate: "24 घंटे के भीतर निरीक्षण निर्धारित करें",
     actionLow: "निगरानी करें",
     loading: "हॉटस्पॉट डेटा लोड हो रहा है…",
+    aqiProxyLabel: "AQI प्रॉक्सी",
+    hotspotScoreLabel: "हॉटस्पॉट स्कोर",
+    severityLabel: "गंभीरता",
+    popupHotspotScore: "हॉटस्पॉट स्कोर",
+    popupAqi: "AQI",
+    popupPredicted: "24 घंटे में अनुमानित AQI",
+    listenLabel: "सुनें",
   },
 };
 

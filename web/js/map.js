@@ -33,6 +33,10 @@ function briefingText(zone) {
   return getLang() === "hi" ? zone.ai_briefing_hi ?? zone.ai_briefing : zone.ai_briefing;
 }
 
+function displayName(zone) {
+  return getLang() === "hi" ? zone.name_hi ?? zone.name : zone.name;
+}
+
 function forecastBadge(zone) {
   if (zone.predicted_aqi_24h == null) {
     return { text: t("forecastPending"), className: "pending" };
@@ -66,13 +70,13 @@ function buildTile(zone, markersByZone) {
 
   const photoNote =
     zone.photo_severity > 0
-      ? `<dt>${t("citizenReportsLabel")}</dt><dd>severity ${zone.photo_severity}</dd>`
+      ? `<dt>${t("citizenReportsLabel")}</dt><dd>${t("severityLabel")} ${zone.photo_severity}</dd>`
       : "";
 
   const briefingBlock = briefing
     ? `<p class="tile-briefing">
          <span class="briefing-label">${t("aiBriefingLabel")}</span>
-         <button type="button" class="tts-btn" title="Listen" aria-label="Listen">🔊</button>
+         <button type="button" class="tts-btn" title="${t("listenLabel")}" aria-label="${t("listenLabel")}">🔊</button>
          ${briefing}
        </p>`
     : "";
@@ -81,8 +85,8 @@ function buildTile(zone, markersByZone) {
     <div class="tile-summary">
       <span class="severity-dot"></span>
       <div class="tile-main">
-        <div class="tile-name">${zone.name}</div>
-        <div class="tile-current">AQI proxy ${zone.aqi ?? "n/a"} · hotspot score ${zone.hotspot_score}</div>
+        <div class="tile-name">${displayName(zone)}</div>
+        <div class="tile-current">${t("aqiProxyLabel")} ${zone.aqi ?? "n/a"} · ${t("hotspotScoreLabel")} ${zone.hotspot_score}</div>
       </div>
       <div class="tile-forecast">
         <span>${t("forecastLabel")}</span>
@@ -148,7 +152,7 @@ function renderZones(hotspots) {
       })
         .addTo(map)
         .bindPopup(
-          `<strong>${zone.name}</strong><br/>Hotspot score: ${zone.hotspot_score}<br/>AQI: ${zone.aqi ?? "n/a"}<br/>Predicted 24h AQI: ${zone.predicted_aqi_24h ?? "n/a"}`
+          `<strong>${displayName(zone)}</strong><br/>${t("popupHotspotScore")}: ${zone.hotspot_score}<br/>${t("popupAqi")}: ${zone.aqi ?? "n/a"}<br/>${t("popupPredicted")}: ${zone.predicted_aqi_24h ?? "n/a"}`
         );
       markers.push(marker);
       markersByZone.set(zone.zone_id, marker);
@@ -157,7 +161,7 @@ function renderZones(hotspots) {
 
       const opt = document.createElement("option");
       opt.value = zone.zone_id;
-      opt.textContent = zone.name;
+      opt.textContent = displayName(zone);
       zoneSelect.appendChild(opt);
     });
 }
