@@ -12,7 +12,7 @@
       "photo_type": "smoke",
       "hotspot_score": 0.385,
       "predicted_aqi_24h": 197.4,
-      "ai_briefing": "Anand Vihar's air quality is unhealthy, a significant jump from its recent average, likely due to a local smoke source as indicated by citizen reports."
+      "ai_briefing": null
     },
     {
       "zone_id": "rk_puram",
@@ -26,7 +26,7 @@
       "photo_type": "none",
       "hotspot_score": 0.158,
       "predicted_aqi_24h": 224.6,
-      "ai_briefing": "R.K. Puram's air quality is poor and worsening, driven by a prolonged period of high pollution, not immediate fires."
+      "ai_briefing": null
     },
     {
       "zone_id": "punjabi_bagh",
@@ -40,7 +40,7 @@
       "photo_type": "none",
       "hotspot_score": 0.206,
       "predicted_aqi_24h": 190.7,
-      "ai_briefing": "Punjabi Bagh AQI is unhealthy at 206, driven by a high 30-day average, despite recent improvement and no active fires."
+      "ai_briefing": null
     },
     {
       "zone_id": "ito",
@@ -54,7 +54,7 @@
       "photo_type": "none",
       "hotspot_score": 0.176,
       "predicted_aqi_24h": 179.2,
-      "ai_briefing": "**ITO, Delhi NCR's air quality is currently unhealthy (AQI 176), driven by a persistent industrial/traffic baseline, despite a recent drop from the very poor 30-day average.**"
+      "ai_briefing": null
     },
     {
       "zone_id": "dwarka",
