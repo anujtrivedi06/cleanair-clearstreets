@@ -1,13 +1,23 @@
 """
-Generates a one-sentence AI situational briefing per zone using Gemini
-(server-side call -- see config.py for why this key never touches the
-browser), falling back to Groq (free-tier, open-source models) if Gemini's
-daily quota is exhausted -- e.g. from repeated manual demo-day triggers. We
-compute the historical comparison (7-day / 30-day average AQI) ourselves
+Generates a one-sentence AI situational briefing per zone -- in English AND
+Hindi, in a single call -- using Gemini (server-side call -- see config.py
+for why this key never touches the browser), falling back to Groq (free-tier,
+open-source models) if Gemini's daily quota is exhausted -- e.g. from
+repeated manual demo-day triggers.
+
+Both languages are generated in one LLM call (not translated separately)
+deliberately: Cloud Translation API requires a billing account even for its
+free-tier usage, which conflicts with this project's no-card constraint, and
+a second translation call per zone would also double our LLM request count
+against Gemini/Groq's own daily quotas. Asking for both languages at once
+costs nothing extra.
+
+We compute the historical comparison (7-day / 30-day average AQI) ourselves
 with plain arithmetic -- LLMs are unreliable at math -- and only ask the
 model to reason about likely cause and write the natural-language summary.
 That keeps the AI doing synthesis/reasoning work, not decoration.
 """
+import json
 import statistics
 import time
 
@@ -40,7 +50,17 @@ Recent citizen photo reports: {photo_count} (worst severity {photo_severity}, ty
 Write ONE short sentence (max 25 words) explaining the current situation and
 most likely cause (e.g. traffic/industrial baseline, fire/stubble burning,
 citizen-reported local source, or normal/improving). Be concrete and specific
-to the numbers given. Do not just repeat the raw numbers -- interpret them."""
+to the numbers given. Do not just repeat the raw numbers -- interpret them.
+
+Respond ONLY with compact JSON of the form {{"en": "<the sentence in English>",
+"hi": "<the same sentence translated into natural, fluent Hindi>"}}. No markdown,
+no code fences, just the raw JSON object."""
+
+
+def parse_bilingual_response(text):
+    cleaned = text.replace("```json", "").replace("```", "").strip()
+    data = json.loads(cleaned)
+    return data["en"].strip(), data["hi"].strip()
 
 
 def historical_averages(zone_id):
@@ -91,21 +111,26 @@ def briefing_for_zone(hotspot):
         photo_type=hotspot.get("photo_type", "none"),
     )
     try:
-        return call_gemini(prompt), "gemini"
+        raw, source = call_gemini(prompt), "gemini"
     except Exception as e:
         print(f"[warn] Gemini briefing failed for {hotspot['zone_id']}, trying Groq fallback: {e}")
-        return call_groq(prompt), "groq"
+        raw, source = call_groq(prompt), "groq"
+
+    en, hi = parse_bilingual_response(raw)
+    return en, hi, source
 
 
 def add_briefings(hotspots):
     for hotspot in hotspots:
         try:
-            briefing, source = briefing_for_zone(hotspot)
-            hotspot["ai_briefing"] = briefing
+            en, hi, source = briefing_for_zone(hotspot)
+            hotspot["ai_briefing"] = en
+            hotspot["ai_briefing_hi"] = hi
             hotspot["ai_briefing_source"] = source
         except Exception as e:
             print(f"[warn] briefing failed for {hotspot['zone_id']} on both providers: {e}")
             hotspot["ai_briefing"] = None
+            hotspot["ai_briefing_hi"] = None
             hotspot["ai_briefing_source"] = None
         time.sleep(4)  # stay comfortably under free-tier RPM limits
     return hotspots

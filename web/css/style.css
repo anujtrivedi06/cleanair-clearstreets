@@ -1,8 +1,27 @@
 * { box-sizing: border-box; font-family: system-ui, sans-serif; }
 body { margin: 0; }
-header { background: #1b1f23; color: #fff; padding: 1rem 1.5rem; }
+header {
+  background: #1b1f23;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 header h1 { margin: 0; font-size: 1.4rem; }
 header p { margin: 0.25rem 0 0; color: #b8c0c8; font-size: 0.9rem; }
+
+.lang-toggle { display: flex; gap: 0.35rem; flex-shrink: 0; }
+.lang-btn {
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: none;
+  color: #b8c0c8;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.lang-btn.active { background: #1a73e8; border-color: #1a73e8; color: #fff; }
 
 main { display: flex; height: calc(100vh - 72px); }
 #map { flex: 1; }
@@ -131,6 +150,16 @@ main { display: flex; height: calc(100vh - 72px); }
   color: #1a73e8;
   margin-bottom: 0.15rem;
 }
+.tts-btn {
+  float: right;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0 0.2rem;
+  line-height: 1;
+}
+.tts-btn:hover { transform: scale(1.15); }
 
 .tile-details dl { display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 0.6rem; margin: 0; }
 .tile-details dt { color: #888; }

@@ -44,6 +44,7 @@ def carry_forward_briefings(hotspots):
     for h in hotspots:
         prev = existing.get(h["zone_id"], {})
         h["ai_briefing"] = prev.get("ai_briefing")
+        h["ai_briefing_hi"] = prev.get("ai_briefing_hi")
         h["ai_briefing_source"] = prev.get("ai_briefing_source")
     return hotspots
 

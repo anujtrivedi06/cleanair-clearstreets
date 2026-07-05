@@ -9,37 +9,43 @@
 </head>
 <body>
   <header>
-    <h1>CleanAir &amp; Clear Streets</h1>
-    <p>Live pollution hotspots &amp; 24h spike forecast — Delhi NCR</p>
+    <div class="header-text">
+      <h1>CleanAir &amp; Clear Streets</h1>
+      <p data-i18n="subtitle">Live pollution hotspots &amp; 24h spike forecast — Delhi NCR</p>
+    </div>
+    <div class="lang-toggle">
+      <button type="button" class="lang-btn active" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="hi">हिं</button>
+    </div>
   </header>
 
   <main>
     <aside id="zones-panel">
       <div id="tiles-column">
         <div class="panel-header">
-          <h2>Zones</h2>
-          <span class="panel-subtitle">Ranked by AQI, high to low</span>
+          <h2 data-i18n="zonesHeader">Zones</h2>
+          <span class="panel-subtitle" data-i18n="zonesSubtitle">Ranked by AQI, high to low</span>
         </div>
 
         <div id="zone-tiles">
-          <div class="placeholder-tile">Loading hotspot data…</div>
+          <div class="placeholder-tile" data-i18n="loading">Loading hotspot data…</div>
         </div>
       </div>
 
       <div id="report-section">
         <button type="button" id="report-toggle" class="report-toggle">
           <span class="toggle-icon">+</span>
-          <span>Report a pollution source</span>
+          <span data-i18n="reportToggle">Report a pollution source</span>
         </button>
         <div id="report-body" class="report-body">
           <form id="submit-form">
-            <label>Photo
+            <label><span data-i18n="photoLabel">Photo</span>
               <input type="file" id="photo-input" accept="image/*" capture="environment" required />
             </label>
-            <label>Location
+            <label><span data-i18n="locationLabel">Location</span>
               <select id="zone-select"></select>
             </label>
-            <button type="submit">Classify &amp; submit</button>
+            <button type="submit" data-i18n="submitButton">Classify &amp; submit</button>
           </form>
           <div id="classification-result"></div>
         </div>
@@ -50,7 +56,7 @@
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="js/map.js"></script>
+  <script type="module" src="js/map.js"></script>
   <script type="module" src="js/submit.js"></script>
 </body>
 </html>
