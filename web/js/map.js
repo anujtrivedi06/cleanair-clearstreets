@@ -37,6 +37,14 @@ function displayName(zone) {
   return getLang() === "hi" ? zone.name_hi ?? zone.name : zone.name;
 }
 
+function relativeTime(isoTimestamp) {
+  const diffMs = Date.now() - new Date(isoTimestamp).getTime();
+  const hours = Math.round(diffMs / 3600000);
+  if (hours < 1) return "<1h";
+  if (hours < 24) return `${hours}h`;
+  return `${Math.round(hours / 24)}d`;
+}
+
 function forecastBadge(zone) {
   if (zone.predicted_aqi_24h == null) {
     return { text: t("forecastPending"), className: "pending" };
@@ -73,6 +81,10 @@ function buildTile(zone, markersByZone) {
       ? `<dt>${t("citizenReportsLabel")}</dt><dd>${t("severityLabel")} ${zone.photo_severity}</dd>`
       : "";
 
+  const staleNote = zone.aqi_stale
+    ? `<span class="stale-note">⚠ ${t("staleNote")} (${relativeTime(zone.aqi_as_of)})</span>`
+    : "";
+
   const briefingBlock = briefing
     ? `<p class="tile-briefing">
          <span class="briefing-label">${t("aiBriefingLabel")}</span>
@@ -87,6 +99,7 @@ function buildTile(zone, markersByZone) {
       <div class="tile-main">
         <div class="tile-name">${displayName(zone)}</div>
         <div class="tile-current">${t("aqiProxyLabel")} ${zone.aqi ?? "n/a"} · ${t("hotspotScoreLabel")} ${zone.hotspot_score}</div>
+        ${staleNote}
       </div>
       <div class="tile-forecast">
         <span>${t("forecastLabel")}</span>

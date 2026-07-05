@@ -89,6 +89,7 @@ main { display: flex; height: calc(100vh - 72px); }
 .tile-main { flex: 1; min-width: 0; }
 .tile-name { font-weight: 600; font-size: 0.92rem; }
 .tile-current { font-size: 0.78rem; color: #666; margin-top: 0.1rem; }
+.stale-note { display: block; font-size: 0.7rem; color: #a8710a; margin-top: 0.15rem; }
 
 .tile-forecast {
   display: flex;

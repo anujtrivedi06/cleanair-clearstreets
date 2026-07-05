@@ -51,6 +51,23 @@ def nearest_zone_firms_count(zone, firms_rows, radius_deg=0.05):
     return count
 
 
+def last_known_aqi(zone_id):
+    """
+    Fallback when a CPCB station reports nothing this cycle (station offline,
+    or its PM2.5/PM10 sensors specifically report "NA" while other pollutants
+    still work -- both observed in practice). Without this, an offline
+    station makes its zone look artificially clean (aqi=None -> score 0),
+    which is the opposite of the truth: we just don't know its current state.
+    Returns (aqi, timestamp) from the most recent history point, or
+    (None, None) if there's no history at all yet.
+    """
+    history = load_json(PROCESSED_DIR / f"history_{zone_id}.json", [])
+    for entry in reversed(history):
+        if entry.get("aqi") is not None:
+            return entry["aqi"], entry["timestamp"]
+    return None, None
+
+
 def fuse():
     zones = load_zones()
     cpcb_records = load_json(RAW_DIR / "cpcb_latest.json", [])
@@ -62,7 +79,13 @@ def fuse():
     hotspots = []
     for zone in zones:
         cpcb = cpcb_by_station.get(zone["cpcb_station"], {})
-        pm_score = normalize_pm_proxy(cpcb.get("pollutant_avg"))
+        aqi = cpcb.get("pollutant_avg")
+        aqi_stale, aqi_as_of = False, None
+        if aqi is None:
+            aqi, aqi_as_of = last_known_aqi(zone["id"])
+            aqi_stale = aqi is not None
+
+        pm_score = normalize_pm_proxy(aqi)
         firms_count = nearest_zone_firms_count(zone, firms_rows)
         firms_score = min(firms_count / 5, 1.0)  # 5+ detections = max score
         photo_entry = photo_scores.get(zone["id"], {})
@@ -79,7 +102,9 @@ def fuse():
                 "name_hi": zone.get("name_hi", zone["name"]),
                 "lat": zone["lat"],
                 "lon": zone["lon"],
-                "aqi": cpcb.get("pollutant_avg"),
+                "aqi": aqi,
+                "aqi_stale": aqi_stale,
+                "aqi_as_of": aqi_as_of,
                 "firms_detections": firms_count,
                 "photo_severity": photo_score,
                 "photo_count": photo_entry.get("count", 0),

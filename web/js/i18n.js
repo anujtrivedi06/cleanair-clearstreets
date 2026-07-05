@@ -29,6 +29,7 @@ export const translations = {
     popupAqi: "AQI",
     popupPredicted: "Predicted 24h AQI",
     listenLabel: "Listen",
+    staleNote: "last known reading, station offline",
   },
   hi: {
     subtitle: "लाइव प्रदूषण हॉटस्पॉट और 24 घंटे का पूर्वानुमान — दिल्ली एनसीआर",
@@ -54,6 +55,7 @@ export const translations = {
     popupAqi: "AQI",
     popupPredicted: "24 घंटे में अनुमानित AQI",
     listenLabel: "सुनें",
+    staleNote: "अंतिम ज्ञात रीडिंग, स्टेशन ऑफ़लाइन है",
   },
 };
 
