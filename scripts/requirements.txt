@@ -4,3 +4,4 @@ numpy
 scikit-learn
 python-dateutil
 python-dotenv
+google-cloud-firestore

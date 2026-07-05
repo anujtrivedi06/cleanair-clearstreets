@@ -27,6 +27,18 @@ NCR_STATES = ["Delhi", "Haryana", "Uttar Pradesh"]
 # NASA FIRMS — free API key from https://firms.modaps.eosdis.nasa.gov/api/
 FIRMS_MAP_KEY = os.environ.get("FIRMS_MAP_KEY", "")
 
+# Gemini API key from Google AI Studio (https://aistudio.google.com/apikey).
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_MODEL = "gemini-2.5-flash"
+
+# Firestore -- stores citizen photo reports (public create, backend-only read;
+# see firestore.rules). Backend access uses a service-account key, which
+# bypasses security rules entirely, so it can read what the public API can't.
+FIREBASE_PROJECT_ID = os.environ.get("FIREBASE_PROJECT_ID", "gen-lang-client-0882700239")
+FIREBASE_SERVICE_ACCOUNT_PATH = os.environ.get(
+    "FIREBASE_SERVICE_ACCOUNT_PATH", str(ROOT / "firebase-service-account.json")
+)
+
 # Open-Meteo needs no key at all.
 OPEN_METEO_BASE_URL = "https://api.open-meteo.com/v1/forecast"
 OPEN_METEO_ARCHIVE_URL = "https://archive-api.open-meteo.com/v1/archive"

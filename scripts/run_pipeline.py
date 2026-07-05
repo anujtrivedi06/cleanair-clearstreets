@@ -11,6 +11,7 @@ import shutil
 import append_history
 import fetch_cpcb
 import fetch_firms
+import fetch_photo_reports
 import fetch_weather
 import fuse_hotspots
 import predict_spike
@@ -47,6 +48,11 @@ def main():
         fetch_weather.main()
     except Exception as e:
         print(f"[warn] Weather fetch failed, continuing: {e}")
+
+    try:
+        fetch_photo_reports.main()
+    except Exception as e:
+        print(f"[warn] Photo reports fetch failed, continuing with stale/empty data: {e}")
 
     try:
         append_history.append_all()

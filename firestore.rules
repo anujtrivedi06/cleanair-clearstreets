@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Citizen photo reports: anyone can submit one (basic shape/range
+    // validation only), but nobody can read, edit, or delete through the
+    // public client API. Only the backend pipeline (service-account
+    // credentials, which bypass these rules) can read reports and fold them
+    // into the hotspot fusion score.
+    match /reports/{reportId} {
+      allow create: if request.resource.data.keys().hasAll(['zoneId', 'type', 'severity', 'reasoning', 'timestamp'])
+                    && request.resource.data.severity is number
+                    && request.resource.data.severity >= 0
+                    && request.resource.data.severity <= 1;
+      allow read, update, delete: if false;
+    }
+  }
+}
