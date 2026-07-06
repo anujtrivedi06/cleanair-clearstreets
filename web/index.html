@@ -33,22 +33,34 @@
         </div>
       </div>
 
-      <div id="report-section">
-        <button type="button" id="report-toggle" class="report-toggle">
-          <span class="toggle-icon">+</span>
-          <span data-i18n="reportToggle">Report a pollution source</span>
-        </button>
-        <div id="report-body" class="report-body">
-          <form id="submit-form">
-            <label><span data-i18n="photoLabel">Photo</span>
-              <input type="file" id="photo-input" accept="image/*" capture="environment" required />
-            </label>
-            <label><span data-i18n="locationLabel">Location</span>
-              <select id="zone-select"></select>
-            </label>
-            <button type="submit" data-i18n="submitButton">Classify &amp; submit</button>
-          </form>
-          <div id="classification-result"></div>
+      <div id="side-column">
+        <div id="report-section">
+          <button type="button" id="report-toggle" class="report-toggle">
+            <span class="toggle-icon">+</span>
+            <span data-i18n="reportToggle">Report a pollution source</span>
+          </button>
+          <div id="report-body" class="report-body">
+            <form id="submit-form">
+              <label><span data-i18n="photoLabel">Photo</span>
+                <input type="file" id="photo-input" accept="image/*" capture="environment" required />
+              </label>
+              <label><span data-i18n="locationLabel">Location</span>
+                <select id="zone-select"></select>
+              </label>
+              <button type="submit" data-i18n="submitButton">Classify &amp; submit</button>
+            </form>
+            <div id="classification-result"></div>
+          </div>
+        </div>
+
+        <div id="my-reports-section">
+          <button type="button" id="my-reports-toggle" class="report-toggle">
+            <span class="toggle-icon">+</span>
+            <span data-i18n="myReportsLabel">My Reports</span>
+          </button>
+          <div id="my-reports-body" class="report-body">
+            <div id="my-reports-list"></div>
+          </div>
         </div>
       </div>
     </aside>

@@ -9,6 +9,7 @@ import {
   getGenerativeModel,
   GoogleAIBackend,
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-ai.js";
+import { recordReport } from "./myReports.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCGJQ3Xl2_hTloRhyLAV-prVgBzpgngtnU",
@@ -63,6 +64,7 @@ async function saveReportToFirestore(zoneId, result) {
       severity: { doubleValue: result.severity },
       reasoning: { stringValue: result.reasoning },
       timestamp: { stringValue: new Date().toISOString() },
+      status: { stringValue: "pending" },
     },
   };
   const resp = await fetch(FIRESTORE_REPORTS_URL, {
@@ -71,6 +73,10 @@ async function saveReportToFirestore(zoneId, result) {
     body: JSON.stringify(body),
   });
   if (!resp.ok) throw new Error(`Firestore write error: ${resp.status} ${await resp.text()}`);
+  const data = await resp.json();
+  const reportId = data.name.split("/").pop();
+  recordReport(reportId, zoneId);
+  window.dispatchEvent(new CustomEvent("myReportAdded"));
 }
 
 document.getElementById("submit-form").addEventListener("submit", async (e) => {

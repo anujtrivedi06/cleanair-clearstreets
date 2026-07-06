@@ -2,16 +2,22 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     // Citizen photo reports: anyone can submit one (basic shape/range
-    // validation only), but nobody can read, edit, or delete through the
-    // public client API. Only the backend pipeline (service-account
-    // credentials, which bypass these rules) can read reports and fold them
-    // into the hotspot fusion score.
+    // validation only). Only the backend pipeline (service-account
+    // credentials, which bypass these rules entirely) can update reports
+    // (e.g. marking one "acknowledged") or run a bulk query over the
+    // collection. Single-document reads ("get") are allowed so a citizen's
+    // own browser can check the status of a report it already knows the
+    // (long, random, unguessable) document ID for -- that ID is never
+    // exposed anywhere except to the submitter and our backend, and "list"
+    // stays denied so nobody can enumerate/browse all reports.
     match /reports/{reportId} {
       allow create: if request.resource.data.keys().hasAll(['zoneId', 'type', 'severity', 'reasoning', 'timestamp'])
                     && request.resource.data.severity is number
                     && request.resource.data.severity >= 0
                     && request.resource.data.severity <= 1;
-      allow read, update, delete: if false;
+      allow get: if true;
+      allow list: if false;
+      allow update, delete: if false;
     }
   }
 }

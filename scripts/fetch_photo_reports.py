@@ -43,7 +43,31 @@ def fetch_recent_reports(client):
         .where(filter=FieldFilter("timestamp", ">=", cutoff_iso))
         .stream()
     )
-    return [doc.to_dict() for doc in docs]
+    reports = []
+    for doc in docs:
+        data = doc.to_dict()
+        data["_doc_id"] = doc.id
+        reports.append(data)
+    return reports
+
+
+def mark_acknowledged(client, reports):
+    """
+    Flips status "pending" -> "acknowledged" once a report has actually been
+    folded into this cycle's hotspot fusion, so a citizen checking "My
+    Reports" (see web/js/myReports.js) sees their report mattered, not just
+    that it was received.
+    """
+    updated = 0
+    for r in reports:
+        doc_id = r.get("_doc_id")
+        if not doc_id or r.get("zoneId") is None or r.get("severity") is None:
+            continue
+        if r.get("status") == "acknowledged":
+            continue
+        client.collection("reports").document(doc_id).update({"status": "acknowledged"})
+        updated += 1
+    return updated
 
 
 def aggregate_by_zone(reports):
@@ -70,6 +94,9 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(aggregated, f, indent=2)
     print(f"Aggregated {len(reports)} reports into {len(aggregated)} zones -> {out_path}")
+
+    updated = mark_acknowledged(client, reports)
+    print(f"Marked {updated} report(s) as acknowledged")
 
 
 if __name__ == "__main__":

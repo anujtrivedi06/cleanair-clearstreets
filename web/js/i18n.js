@@ -35,6 +35,11 @@ export const translations = {
     headlineTemplate: "~{count} citizens currently in poor+ AQI zones",
     schoolsLabel: "schools nearby",
     hospitalsLabel: "hospitals/clinics nearby",
+    myReportsLabel: "My Reports",
+    noReportsYet: "You haven't reported anything from this device yet.",
+    statusPending: "Pending review",
+    statusAcknowledged: "✓ Included in live map",
+    reportedTemplate: "{type} reported near {zone}, {time} ago",
   },
   hi: {
     subtitle: "लाइव प्रदूषण हॉटस्पॉट और 24 घंटे का पूर्वानुमान — दिल्ली एनसीआर",
@@ -66,6 +71,11 @@ export const translations = {
     headlineTemplate: "वर्तमान में लगभग {count} नागरिक खराब+ AQI क्षेत्रों में हैं",
     schoolsLabel: "आस-पास स्कूल",
     hospitalsLabel: "आस-पास अस्पताल/क्लिनिक",
+    myReportsLabel: "मेरी रिपोर्ट",
+    noReportsYet: "आपने इस डिवाइस से अभी तक कोई रिपोर्ट नहीं की है।",
+    statusPending: "समीक्षा लंबित",
+    statusAcknowledged: "✓ लाइव मैप में शामिल",
+    reportedTemplate: "{zone} के पास {type} की सूचना दी गई, {time} पहले",
   },
 };
 

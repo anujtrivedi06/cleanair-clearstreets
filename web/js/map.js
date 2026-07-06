@@ -2,10 +2,13 @@
 // published by the GitHub Actions pipeline (scripts/run_pipeline.py ->
 // web/data/hotspots.json).
 import { applyStaticText, getLang, onLangChange, t, tFormat } from "./i18n.js";
+import { getStoredReports } from "./myReports.js";
 
 // Matches scripts/fuse_hotspots.py's POOR_AQI_THRESHOLD -- CPCB's public
 // "Poor" AQI category starts at 201.
 const POOR_AQI_THRESHOLD = 200;
+
+const FIREBASE_PROJECT_ID = "gen-lang-client-0882700239";
 
 const map = L.map("map").setView([28.6139, 77.209], 10); // Delhi NCR center
 
@@ -284,4 +287,67 @@ document.getElementById("report-toggle").addEventListener("click", () => {
   const icon = document.querySelector("#report-toggle .toggle-icon");
   const open = body.classList.toggle("open");
   icon.textContent = open ? "−" : "+";
+});
+
+function zoneNameById(zoneId) {
+  const zone = (cachedHotspots || []).find((z) => z.zone_id === zoneId);
+  return zone ? displayName(zone) : zoneId;
+}
+
+function parseFirestoreFields(fields) {
+  const result = {};
+  for (const [key, value] of Object.entries(fields ?? {})) {
+    result[key] = value.stringValue ?? value.doubleValue ?? value.integerValue ?? null;
+  }
+  return result;
+}
+
+async function fetchReportStatus(reportId) {
+  const url = `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/reports/${reportId}`;
+  const res = await fetch(url);
+  if (!res.ok) return null;
+  const doc = await res.json();
+  return parseFirestoreFields(doc.fields);
+}
+
+async function renderMyReports() {
+  const listEl = document.getElementById("my-reports-list");
+  const stored = getStoredReports();
+  if (!stored.length) {
+    listEl.innerHTML = `<p class="my-reports-empty">${t("noReportsYet")}</p>`;
+    return;
+  }
+
+  listEl.innerHTML = `<p class="my-reports-empty">${t("loading")}</p>`;
+  const items = await Promise.all(
+    stored.map(async (r) => ({ ...r, ...(await fetchReportStatus(r.id)) }))
+  );
+
+  listEl.innerHTML = items
+    .map((item) => {
+      const acknowledged = item.status === "acknowledged";
+      const statusText = acknowledged ? t("statusAcknowledged") : t("statusPending");
+      const desc = tFormat("reportedTemplate", {
+        type: item.type ?? "?",
+        zone: zoneNameById(item.zoneId),
+        time: relativeTime(item.submittedAt),
+      });
+      return `<div class="my-report-item ${acknowledged ? "acknowledged" : "pending"}">
+        <p>${desc}</p>
+        <span class="my-report-status">${statusText}</span>
+      </div>`;
+    })
+    .join("");
+}
+
+document.getElementById("my-reports-toggle").addEventListener("click", () => {
+  const body = document.getElementById("my-reports-body");
+  const icon = document.querySelector("#my-reports-toggle .toggle-icon");
+  const open = body.classList.toggle("open");
+  icon.textContent = open ? "−" : "+";
+  if (open) renderMyReports();
+});
+
+window.addEventListener("myReportAdded", () => {
+  renderMyReports();
 });
