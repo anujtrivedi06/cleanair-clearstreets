@@ -17,6 +17,12 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 18,
 }).addTo(map);
 
+// Leaflet sizes the map once against its container at creation time and
+// doesn't notice later layout changes on its own -- needed for phone
+// orientation changes (portrait <-> landscape), which resize #map via the
+// mobile CSS breakpoint without the page itself reloading.
+window.addEventListener("resize", () => map.invalidateSize());
+
 let cachedHotspots = null;
 let markers = [];
 

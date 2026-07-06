@@ -252,3 +252,36 @@ main { display: flex; height: calc(100vh - 72px); }
 .my-report-status { font-size: 0.72rem; font-weight: 600; color: #a8710a; }
 .my-report-item.acknowledged { border-left-color: #2e8b57; }
 .my-report-item.acknowledged .my-report-status { color: #2e8b57; }
+
+/* ---------- Mobile / narrow-screen layout ----------
+   Desktop uses a fixed 3-column layout (tiles | report+reports | map) that
+   simply doesn't fit a phone screen. Below the breakpoint, everything
+   stacks vertically instead: map on top (fixed height, so it's usable
+   without dominating the whole screen), then the zone list, then the
+   report form / my-reports column -- all in one naturally scrolling page,
+   rather than three independently-scrolling panes (which is awkward with
+   touch scrolling). */
+@media (max-width: 900px) {
+  header { flex-wrap: wrap; gap: 0.5rem; padding: 0.85rem 1rem; }
+  header h1 { font-size: 1.15rem; }
+  header p { font-size: 0.8rem; }
+
+  main { flex-direction: column; height: auto; }
+
+  #map { flex: none; width: 100%; height: 45vh; order: -1; }
+
+  #zones-panel { width: 100%; flex-direction: column; border-right: none; }
+
+  #tiles-column { overflow-y: visible; }
+  .panel-header { position: static; }
+
+  #side-column {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #ddd;
+    overflow-y: visible;
+  }
+
+  .tile-summary { flex-wrap: wrap; }
+  .tile-forecast { align-items: flex-start; margin-left: 1.7rem; }
+}
