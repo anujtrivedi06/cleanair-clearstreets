@@ -1,12 +1,7 @@
 {
-  "anand_vihar": {
-    "severity": 0.9,
-    "count": 3,
-    "type": "smoke"
-  },
   "wazirpur": {
     "severity": 0.9,
-    "count": 3,
+    "count": 2,
     "type": "garbage_burning"
   },
   "rk_puram": {
