@@ -280,6 +280,9 @@ loadFacilities().catch((err) => {
 
 onLangChange(() => {
   if (cachedHotspots) renderZones(cachedHotspots);
+  if (document.getElementById("my-reports-body").classList.contains("open")) {
+    renderMyReports();
+  }
 });
 
 document.getElementById("report-toggle").addEventListener("click", () => {
