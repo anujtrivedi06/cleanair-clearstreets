@@ -1,17 +1,1 @@
-{
-  "gurugram_sec51": {
-    "severity": 0.9,
-    "count": 1,
-    "type": "garbage_burning"
-  },
-  "rohini": {
-    "severity": 1.0,
-    "count": 1,
-    "type": "garbage_burning"
-  },
-  "punjabi_bagh": {
-    "severity": 1.0,
-    "count": 1,
-    "type": "smoke"
-  }
-}
+{}
