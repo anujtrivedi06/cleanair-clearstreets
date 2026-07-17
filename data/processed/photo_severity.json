@@ -1,9 +1,4 @@
 {
-  "rohini": {
-    "severity": 1.0,
-    "count": 2,
-    "type": "garbage_burning"
-  },
   "gurugram_sec51": {
     "severity": 1.0,
     "count": 2,
@@ -15,6 +10,11 @@
     "type": "garbage_burning"
   },
   "dwarka": {
+    "severity": 1.0,
+    "count": 1,
+    "type": "garbage_burning"
+  },
+  "rohini": {
     "severity": 1.0,
     "count": 1,
     "type": "garbage_burning"
