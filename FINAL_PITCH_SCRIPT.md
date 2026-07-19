@@ -1,5 +1,5 @@
 # Demo Day Final Pitch Script — CleanAir & Clear Streets
-**Team: GLM Harmonizers | Track 2 | 3 minutes, live demo included**
+**Team: Code Smashers | Track 2 | 3 minutes, live demo included**
 
 Plain language throughout — no technical terms spoken aloud. Numbers are real, pulled
 from the live system the morning of writing this script (they'll keep changing —
