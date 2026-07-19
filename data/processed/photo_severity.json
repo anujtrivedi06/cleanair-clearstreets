@@ -1,1 +1,7 @@
-{}
+{
+  "noida_sec62": {
+    "severity": 0.9,
+    "count": 1,
+    "type": "garbage_burning"
+  }
+}
