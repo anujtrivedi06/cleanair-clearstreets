@@ -18,7 +18,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 17,
       "sparkline_30d": [
-        204.4,
         383.1,
         327.2,
         374.0,
@@ -47,11 +46,12 @@
         216.0,
         238.8,
         247.5,
-        264.5
+        264.5,
+        257.0
       ],
       "schools_count": 2,
       "hospitals_count": 1,
-      "predicted_aqi_24h": 263.0,
+      "predicted_aqi_24h": 232.8,
       "ai_briefing": "Anand Vihar's air quality remains poor due to industrial baseline emissions.",
       "ai_briefing_hi": "\u0906\u0928\u0902\u0926 \u0935\u093f\u0939\u093e\u0930 \u092e\u0947\u0902 \u0935\u093e\u092f\u0941 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u0915\u091a\u094d\u091a\u0947 \u0909\u0926\u094d\u092f\u094b\u0917\u093f\u0915 \u0909\u0924\u094d\u0938\u0930\u094d\u091c\u0928 \u0915\u0947 \u0915\u093e\u0930\u0923 \u0916\u0930\u093e\u092c \u092c\u0928\u0940 \u0939\u0941\u0908 \u0939\u0948\u0964",
       "ai_briefing_source": "groq"
@@ -72,9 +72,8 @@
       "photo_type": "none",
       "hotspot_score": 0.151,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 11,
+      "recurrence_poor_days": 10,
       "sparkline_30d": [
-        227.0,
         482.2,
         475.0,
         823.9,
@@ -103,11 +102,12 @@
         112.8,
         132.5,
         162.0,
-        164.1
+        164.1,
+        151.0
       ],
       "schools_count": 6,
       "hospitals_count": 5,
-      "predicted_aqi_24h": 290.8,
+      "predicted_aqi_24h": 168.7,
       "ai_briefing": "Air quality is moderate, likely due to industrial baseline.",
       "ai_briefing_hi": "\u0935\u093e\u092f\u0941 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u092e\u0927\u094d\u092f\u092e \u0939\u0948, \u0938\u0902\u092d\u0935\u0924\u0903 \u0914\u0926\u094d\u092f\u094b\u0917\u093f\u0915 \u0906\u0927\u093e\u0930 \u0930\u0947\u0916\u093e \u0915\u0947 \u0915\u093e\u0930\u0923\u0964",
       "ai_briefing_source": "groq"
@@ -128,9 +128,8 @@
       "photo_type": "none",
       "hotspot_score": 0.123,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 10,
+      "recurrence_poor_days": 9,
       "sparkline_30d": [
-        204.4,
         383.1,
         327.2,
         374.0,
@@ -159,11 +158,12 @@
         108.1,
         123.5,
         131.0,
-        129.5
+        129.5,
+        123.0
       ],
       "schools_count": 7,
       "hospitals_count": 9,
-      "predicted_aqi_24h": 173.9,
+      "predicted_aqi_24h": 132.0,
       "ai_briefing": "Air quality in Punjabi Bagh is moderate due to traffic baseline.",
       "ai_briefing_hi": "\u092a\u0902\u091c\u093e\u092c\u0940 \u092c\u093e\u0917\u093c \u092e\u0947\u0902 \u0939\u0935\u093e \u0915\u0940 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u092f\u093e\u0924\u093e\u092f\u093e\u0924 \u0915\u0947 \u0915\u093e\u0930\u0923 \u092e\u0927\u094d\u092f\u092e \u0939\u0948\u0964",
       "ai_briefing_source": "groq"
@@ -184,9 +184,8 @@
       "photo_type": "none",
       "hotspot_score": 0.101,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 8,
+      "recurrence_poor_days": 7,
       "sparkline_30d": [
-        204.4,
         383.1,
         327.2,
         374.0,
@@ -215,11 +214,12 @@
         80.6,
         89.7,
         106.0,
-        110.1
+        110.1,
+        101.0
       ],
       "schools_count": 2,
       "hospitals_count": 0,
-      "predicted_aqi_24h": 159.0,
+      "predicted_aqi_24h": 113.9,
       "ai_briefing": "AQI is moderate, likely due to traffic and industrial baseline.",
       "ai_briefing_hi": "\u0935\u093e\u092f\u0941 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u0938\u0942\u091a\u0915\u093e\u0902\u0915 \u092e\u0949\u0921\u0930\u0947\u091f \u0939\u0948, \u091c\u094b \u092f\u093e\u0924\u093e\u092f\u093e\u0924 \u0914\u0930 \u0914\u0926\u094d\u092f\u094b\u0917\u093f\u0915 \u0906\u0927\u093e\u0930 \u0930\u0947\u0916\u093e \u0915\u0947 \u0915\u093e\u0930\u0923 \u0939\u094b \u0938\u0915\u0924\u093e \u0939\u0948\u0964",
       "ai_briefing_source": "groq"
@@ -240,9 +240,8 @@
       "photo_type": "none",
       "hotspot_score": 0.142,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 11,
+      "recurrence_poor_days": 10,
       "sparkline_30d": [
-        227.0,
         482.2,
         475.0,
         823.9,
@@ -271,11 +270,12 @@
         107.6,
         115.3,
         139.5,
-        142.5
+        142.5,
+        142.0
       ],
       "schools_count": 2,
       "hospitals_count": 3,
-      "predicted_aqi_24h": 280.7,
+      "predicted_aqi_24h": 163.3,
       "ai_briefing": "Air quality is moderately poor due to industrial baseline.",
       "ai_briefing_hi": "\u0935\u093e\u092f\u0941 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u0914\u0926\u094d\u092f\u094b\u0917\u093f\u0915 \u0906\u0927\u093e\u0930 \u0930\u0947\u0916\u093e \u0915\u0947 \u0915\u093e\u0930\u0923 \u092e\u0927\u094d\u092f\u092e \u0930\u0942\u092a \u0938\u0947 \u0916\u0930\u093e\u092c \u0939\u0948",
       "ai_briefing_source": "groq"
@@ -296,9 +296,8 @@
       "photo_type": "none",
       "hotspot_score": 0.133,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 9,
+      "recurrence_poor_days": 8,
       "sparkline_30d": [
-        204.4,
         383.1,
         327.2,
         374.0,
@@ -327,11 +326,12 @@
         111.2,
         124.8,
         129.2,
-        130.6
+        130.6,
+        133.0
       ],
       "schools_count": 15,
       "hospitals_count": 9,
-      "predicted_aqi_24h": 177.0,
+      "predicted_aqi_24h": 138.3,
       "ai_briefing": "Air quality in Rohini is poor due to industrial baseline.",
       "ai_briefing_hi": "\u0930\u094b\u0939\u093f\u0923\u0940 \u092e\u0947\u0902 \u0935\u093e\u092f\u0941 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u0914\u0926\u094d\u092f\u094b\u0917\u093f\u0915 \u0906\u0927\u093e\u0930 \u0930\u0947\u0916\u093e \u0915\u0947 \u0915\u093e\u0930\u0923 \u0916\u0930\u093e\u092c \u0939\u0948\u0964",
       "ai_briefing_source": "groq"
@@ -352,9 +352,8 @@
       "photo_type": "none",
       "hotspot_score": 0.133,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 11,
+      "recurrence_poor_days": 10,
       "sparkline_30d": [
-        227.0,
         482.2,
         475.0,
         823.9,
@@ -383,11 +382,12 @@
         101.8,
         112.3,
         137.5,
-        135.4
+        135.4,
+        132.5
       ],
       "schools_count": 3,
       "hospitals_count": 1,
-      "predicted_aqi_24h": 269.6,
+      "predicted_aqi_24h": 148.8,
       "ai_briefing": "Air quality is moderately poor due to industrial baseline.",
       "ai_briefing_hi": "\u0939\u0935\u093e \u0915\u0940 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u0914\u0926\u094d\u092f\u094b\u0917\u093f\u0915 \u0906\u0927\u093e\u0930 \u0930\u0947\u0916\u093e \u0915\u0947 \u0915\u093e\u0930\u0923 \u092e\u0927\u094d\u092f\u092e \u0930\u0942\u092a \u0938\u0947 \u0916\u0930\u093e\u092c \u0939\u0948\u0964",
       "ai_briefing_source": "groq"
@@ -408,9 +408,8 @@
       "photo_type": "none",
       "hotspot_score": 0.191,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 10,
+      "recurrence_poor_days": 9,
       "sparkline_30d": [
-        293.4,
         204.4,
         383.1,
         327.2,
@@ -439,11 +438,12 @@
         160.0,
         173.2,
         194.2,
-        199.9
+        199.9,
+        191.0
       ],
       "schools_count": 7,
       "hospitals_count": 7,
-      "predicted_aqi_24h": 218.7,
+      "predicted_aqi_24h": 177.8,
       "ai_briefing": "Air quality in Wazirpur is worsening due to industrial baseline.",
       "ai_briefing_hi": "\u0935\u091c\u0940\u0930\u092a\u0941\u0930 \u092e\u0947\u0902 \u0935\u093e\u092f\u0941 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u0914\u0926\u094d\u092f\u094b\u0917\u093f\u0915 \u0906\u0927\u093e\u0930 \u0930\u0947\u0916\u093e \u0915\u0947 \u0915\u093e\u0930\u0923 \u092c\u093f\u0917\u0921\u093c \u0930\u0939\u0940 \u0939\u0948\u0964",
       "ai_briefing_source": "groq"
@@ -464,9 +464,8 @@
       "photo_type": "none",
       "hotspot_score": 0.135,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 8,
+      "recurrence_poor_days": 7,
       "sparkline_30d": [
-        204.4,
         383.1,
         327.2,
         374.0,
@@ -495,11 +494,12 @@
         102.1,
         117.5,
         133.5,
-        133.9
+        133.9,
+        134.5
       ],
       "schools_count": 13,
       "hospitals_count": 10,
-      "predicted_aqi_24h": 178.2,
+      "predicted_aqi_24h": 138.7,
       "ai_briefing": "Air quality is moderate due to industrial baseline.",
       "ai_briefing_hi": "\u0935\u093e\u092f\u0941 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u0909\u0926\u094d\u092f\u094b\u0917\u093f\u0915 \u0906\u0927\u093e\u0930 \u0930\u0947\u0916\u093e \u0915\u0947 \u0915\u093e\u0930\u0923 \u092e\u0927\u094d\u092f\u092e \u0939\u0948",
       "ai_briefing_source": "groq"
@@ -520,9 +520,8 @@
       "photo_type": "none",
       "hotspot_score": 0.13,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 9,
+      "recurrence_poor_days": 8,
       "sparkline_30d": [
-        204.4,
         383.1,
         327.2,
         374.0,
@@ -551,11 +550,12 @@
         108.6,
         122.3,
         143.8,
-        130.5
+        130.5,
+        130.0
       ],
       "schools_count": 2,
       "hospitals_count": 2,
-      "predicted_aqi_24h": 187.5,
+      "predicted_aqi_24h": 136.8,
       "ai_briefing": "AQI is moderate, likely due to industrial baseline.",
       "ai_briefing_hi": "AQI \u092e\u0927\u094d\u092f\u092e \u0939\u0948, \u0938\u0902\u092d\u0935\u0924\u0903 \u0914\u0926\u094d\u092f\u094b\u0917\u093f\u0915 \u0906\u0927\u093e\u0930 \u0930\u0947\u0916\u093e \u0915\u0947 \u0915\u093e\u0930\u0923\u0964",
       "ai_briefing_source": "groq"
@@ -576,9 +576,8 @@
       "photo_type": "none",
       "hotspot_score": 0.193,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 18,
+      "recurrence_poor_days": 17,
       "sparkline_30d": [
-        472.7,
         385.4,
         301.3,
         227.0,
@@ -607,11 +606,12 @@
         165.5,
         181.3,
         187.0,
-        184.6
+        184.6,
+        193.0
       ],
       "schools_count": 4,
       "hospitals_count": 2,
-      "predicted_aqi_24h": 335.9,
+      "predicted_aqi_24h": 203.4,
       "ai_briefing": "Air quality is poor due to industrial baseline",
       "ai_briefing_hi": "\u0935\u093e\u092f\u0941 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u0909\u0926\u094d\u092f\u094b\u0917\u093f\u0915 \u0906\u0927\u093e\u0930 \u0930\u0947\u0916\u093e \u0915\u0947 \u0915\u093e\u0930\u0923 \u0916\u0930\u093e\u092c \u0939\u0948",
       "ai_briefing_source": "groq"
@@ -632,9 +632,8 @@
       "photo_type": "none",
       "hotspot_score": 0.144,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 7,
+      "recurrence_poor_days": 6,
       "sparkline_30d": [
-        209.5,
         308.2,
         298.1,
         322.2,
@@ -663,11 +662,12 @@
         117.0,
         134.7,
         136.5,
-        153.7
+        153.7,
+        144.5
       ],
       "schools_count": 1,
       "hospitals_count": 13,
-      "predicted_aqi_24h": 171.6,
+      "predicted_aqi_24h": 132.2,
       "ai_briefing": "Air quality is poor, primarily due to industrial baseline pollution.",
       "ai_briefing_hi": "\u0935\u093e\u092f\u0941 \u0917\u0941\u0923\u0935\u0924\u094d\u0924\u093e \u0916\u0930\u093e\u092c \u0939\u0948, \u092e\u0941\u0916\u094d\u092f \u0930\u0942\u092a \u0938\u0947 \u0914\u0926\u094d\u092f\u094b\u0917\u093f\u0915 \u0906\u0927\u093e\u0930 \u092a\u094d\u0930\u0926\u0942\u0937\u0923 \u0915\u0947 \u0915\u093e\u0930\u0923\u0964",
       "ai_briefing_source": "groq"
