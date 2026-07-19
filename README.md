@@ -1,4 +1,4 @@
-# CleanAir & Clear Streets — Delhi NCR
+# VayuKavach — Delhi NCR
 
 Built for **Build with AI: Code for Communities** (Track 2 — CleanAir & Clear Streets).
 

@@ -1,5 +1,6 @@
-CleanAir & Clear Streets is a real-time pollution hotspot detection and forecasting
-platform for Delhi NCR. It fuses three independent signals — live CPCB ground-station
+VayuKavach (built for Track 2 — CleanAir & Clear Streets) is a real-time pollution
+hotspot detection and forecasting platform for Delhi NCR. It fuses three independent
+signals — live CPCB ground-station
 air quality readings, NASA FIRMS satellite fire/smoke detections, and citizen-submitted
 photos classified by Gemini (via Firebase AI Logic) — into a single hotspot score per
 zone, then forecasts each zone's AQI 24 hours ahead using a regression model trained on

@@ -1,4 +1,4 @@
-# Demo Day Final Pitch Script — CleanAir & Clear Streets
+# Demo Day Final Pitch Script — VayuKavach
 **Team: Code Smashers | Track 2 | 3 minutes, live demo included**
 
 Plain language throughout — no technical terms spoken aloud. Numbers are real, pulled
@@ -26,9 +26,10 @@ that's the point, it's live).
 > while the city average looks fine. And by the time someone notices, it's too late
 > to act."
 
-> "So we built a system that watches for these hidden pockets automatically — in
-> real time, every three hours, every day — and tells you exactly where the problem
-> is, how bad it'll get in the next 24 hours, and what to do about it."
+> "So we built **VayuKavach** — a shield for the air people breathe. It watches for
+> these hidden pockets automatically, in real time, every few hours, every day — and
+> tells you exactly where the problem is, how bad it'll get in the next 24 hours, and
+> what to do about it."
 
 ---
 
@@ -89,7 +90,7 @@ that's the point, it's live).
 
 ## [CLOSE] — 2:55–3:00
 
-> "This is live, right now, and it's ready. Thank you."
+> "VayuKavach is live, right now, and it's ready. Thank you."
 
 *(Stop talking. Let the silence land. Wait for questions.)*
 
