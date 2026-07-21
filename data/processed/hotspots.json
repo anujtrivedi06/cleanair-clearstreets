@@ -16,9 +16,8 @@
       "photo_type": "none",
       "hotspot_score": 0.126,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 16,
+      "recurrence_poor_days": 15,
       "sparkline_30d": [
-        327.2,
         374.0,
         318.5,
         197.0,
@@ -47,7 +46,8 @@
         247.5,
         264.5,
         241.2,
-        154.8
+        154.8,
+        126.0
       ],
       "schools_count": 2,
       "hospitals_count": 1
@@ -68,9 +68,8 @@
       "photo_type": "none",
       "hotspot_score": 0.072,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 9,
+      "recurrence_poor_days": 8,
       "sparkline_30d": [
-        475.0,
         823.9,
         499.5,
         329.0,
@@ -99,7 +98,8 @@
         162.0,
         164.1,
         129.6,
-        92.2
+        92.2,
+        72.0
       ],
       "schools_count": 6,
       "hospitals_count": 5
@@ -120,9 +120,8 @@
       "photo_type": "none",
       "hotspot_score": 0.084,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 8,
+      "recurrence_poor_days": 7,
       "sparkline_30d": [
-        327.2,
         374.0,
         318.5,
         197.0,
@@ -151,7 +150,8 @@
         131.0,
         129.5,
         122.3,
-        103.8
+        103.8,
+        83.5
       ],
       "schools_count": 7,
       "hospitals_count": 9
@@ -172,9 +172,8 @@
       "photo_type": "none",
       "hotspot_score": 0.08,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 6,
+      "recurrence_poor_days": 5,
       "sparkline_30d": [
-        327.2,
         374.0,
         318.5,
         197.0,
@@ -203,7 +202,8 @@
         106.0,
         110.1,
         105.4,
-        91.7
+        91.7,
+        79.5
       ],
       "schools_count": 2,
       "hospitals_count": 0
@@ -224,9 +224,8 @@
       "photo_type": "none",
       "hotspot_score": 0.094,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 9,
+      "recurrence_poor_days": 8,
       "sparkline_30d": [
-        475.0,
         823.9,
         499.5,
         329.0,
@@ -255,7 +254,8 @@
         139.5,
         142.5,
         139.2,
-        110.2
+        110.2,
+        94.0
       ],
       "schools_count": 2,
       "hospitals_count": 3
@@ -276,9 +276,8 @@
       "photo_type": "none",
       "hotspot_score": 0.096,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 7,
+      "recurrence_poor_days": 6,
       "sparkline_30d": [
-        327.2,
         374.0,
         318.5,
         197.0,
@@ -307,7 +306,8 @@
         129.2,
         130.6,
         129.2,
-        110.3
+        110.3,
+        95.5
       ],
       "schools_count": 15,
       "hospitals_count": 9
@@ -328,9 +328,8 @@
       "photo_type": "none",
       "hotspot_score": 0.07,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 9,
+      "recurrence_poor_days": 8,
       "sparkline_30d": [
-        475.0,
         823.9,
         499.5,
         329.0,
@@ -359,7 +358,8 @@
         137.5,
         135.4,
         134.9,
-        87.1
+        87.1,
+        69.5
       ],
       "schools_count": 3,
       "hospitals_count": 1
@@ -380,9 +380,8 @@
       "photo_type": "none",
       "hotspot_score": 0.181,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 9,
+      "recurrence_poor_days": 8,
       "sparkline_30d": [
-        383.1,
         327.2,
         374.0,
         318.5,
@@ -411,7 +410,8 @@
         194.2,
         199.9,
         189.3,
-        202.9
+        202.9,
+        181.5
       ],
       "schools_count": 7,
       "hospitals_count": 7
@@ -432,9 +432,8 @@
       "photo_type": "none",
       "hotspot_score": 0.089,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 6,
+      "recurrence_poor_days": 5,
       "sparkline_30d": [
-        327.2,
         374.0,
         318.5,
         197.0,
@@ -463,7 +462,8 @@
         133.5,
         133.9,
         134.8,
-        101.8
+        101.8,
+        89.5
       ],
       "schools_count": 13,
       "hospitals_count": 10
@@ -484,9 +484,8 @@
       "photo_type": "none",
       "hotspot_score": 0.077,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 7,
+      "recurrence_poor_days": 6,
       "sparkline_30d": [
-        327.2,
         374.0,
         318.5,
         197.0,
@@ -515,7 +514,8 @@
         143.8,
         130.5,
         131.9,
-        94.6
+        94.6,
+        77.5
       ],
       "schools_count": 2,
       "hospitals_count": 2
@@ -536,9 +536,8 @@
       "photo_type": "none",
       "hotspot_score": 0.127,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 17,
+      "recurrence_poor_days": 16,
       "sparkline_30d": [
-        301.3,
         227.0,
         482.2,
         475.0,
@@ -567,7 +566,8 @@
         187.0,
         184.6,
         200.1,
-        146.2
+        146.2,
+        126.5
       ],
       "schools_count": 4,
       "hospitals_count": 2
@@ -588,9 +588,8 @@
       "photo_type": "none",
       "hotspot_score": 0.075,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 5,
+      "recurrence_poor_days": 4,
       "sparkline_30d": [
-        298.1,
         322.2,
         293.3,
         180.8,
@@ -619,7 +618,8 @@
         136.5,
         153.7,
         154.8,
-        94.2
+        94.2,
+        75.0
       ],
       "schools_count": 1,
       "hospitals_count": 13
