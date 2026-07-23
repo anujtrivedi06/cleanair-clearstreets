@@ -47,7 +47,7 @@
         154.8,
         102.6,
         90.5,
-        84.8
+        85.2
       ],
       "schools_count": 2,
       "hospitals_count": 1
@@ -59,14 +59,14 @@
       "lat": 28.5644,
       "lon": 77.177,
       "population": 180000,
-      "aqi": 46.0,
+      "aqi": 42.5,
       "aqi_stale": false,
       "aqi_as_of": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "photo_count": 0,
       "photo_type": "none",
-      "hotspot_score": 0.046,
+      "hotspot_score": 0.043,
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 6,
       "sparkline_30d": [
@@ -99,7 +99,7 @@
         92.2,
         59.6,
         37.2,
-        41.2
+        41.5
       ],
       "schools_count": 6,
       "hospitals_count": 5
@@ -111,14 +111,14 @@
       "lat": 28.6692,
       "lon": 77.131,
       "population": 120000,
-      "aqi": 62.0,
+      "aqi": 56.5,
       "aqi_stale": false,
       "aqi_as_of": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "photo_count": 0,
       "photo_type": "none",
-      "hotspot_score": 0.062,
+      "hotspot_score": 0.057,
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 5,
       "sparkline_30d": [
@@ -151,7 +151,7 @@
         103.8,
         63.4,
         59.9,
-        62.7
+        61.1
       ],
       "schools_count": 7,
       "hospitals_count": 9
@@ -203,7 +203,7 @@
         91.7,
         64.0,
         56.2,
-        53.3
+        52.2
       ],
       "schools_count": 2,
       "hospitals_count": 0
@@ -215,14 +215,14 @@
       "lat": 28.571,
       "lon": 77.072,
       "population": 90000,
-      "aqi": 60.5,
+      "aqi": 59.5,
       "aqi_stale": false,
       "aqi_as_of": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "photo_count": 0,
       "photo_type": "none",
-      "hotspot_score": 0.06,
+      "hotspot_score": 0.059,
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 6,
       "sparkline_30d": [
@@ -255,7 +255,7 @@
         110.2,
         56.2,
         29.7,
-        48.5
+        51.2
       ],
       "schools_count": 2,
       "hospitals_count": 3
@@ -267,14 +267,14 @@
       "lat": 28.733,
       "lon": 77.12,
       "population": 250000,
-      "aqi": 65.5,
+      "aqi": 62.0,
       "aqi_stale": false,
       "aqi_as_of": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "photo_count": 0,
       "photo_type": "none",
-      "hotspot_score": 0.066,
+      "hotspot_score": 0.062,
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 4,
       "sparkline_30d": [
@@ -307,7 +307,7 @@
         110.3,
         71.8,
         59.5,
-        67.3
+        66.0
       ],
       "schools_count": 15,
       "hospitals_count": 9
@@ -319,14 +319,14 @@
       "lat": 28.5355,
       "lon": 77.2726,
       "population": 80000,
-      "aqi": 43.0,
+      "aqi": 41.5,
       "aqi_stale": false,
       "aqi_as_of": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "photo_count": 0,
       "photo_type": "none",
-      "hotspot_score": 0.043,
+      "hotspot_score": 0.042,
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 6,
       "sparkline_30d": [
@@ -359,7 +359,7 @@
         87.1,
         55.1,
         38.8,
-        41.0
+        41.1
       ],
       "schools_count": 3,
       "hospitals_count": 1
@@ -371,14 +371,14 @@
       "lat": 28.6997,
       "lon": 77.165,
       "population": 140000,
-      "aqi": 142.5,
+      "aqi": 139.0,
       "aqi_stale": false,
       "aqi_as_of": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "photo_count": 0,
       "photo_type": "none",
-      "hotspot_score": 0.142,
+      "hotspot_score": 0.139,
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 6,
       "sparkline_30d": [
@@ -411,7 +411,7 @@
         202.9,
         139.6,
         137.2,
-        137.2
+        137.6
       ],
       "schools_count": 7,
       "hospitals_count": 7
@@ -423,14 +423,14 @@
       "lat": 28.6725,
       "lon": 77.3151,
       "population": 100000,
-      "aqi": 53.5,
+      "aqi": 52.5,
       "aqi_stale": false,
       "aqi_as_of": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "photo_count": 0,
       "photo_type": "none",
-      "hotspot_score": 0.053,
+      "hotspot_score": 0.052,
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 3,
       "sparkline_30d": [
@@ -463,7 +463,7 @@
         101.8,
         67.6,
         47.2,
-        51.7
+        51.9
       ],
       "schools_count": 13,
       "hospitals_count": 10
@@ -475,7 +475,7 @@
       "lat": 28.6274,
       "lon": 77.363,
       "population": 90000,
-      "aqi": 42.5,
+      "aqi": 43.5,
       "aqi_stale": false,
       "aqi_as_of": null,
       "firms_detections": 0,
@@ -515,7 +515,7 @@
         94.6,
         55.9,
         38.9,
-        41.2
+        41.8
       ],
       "schools_count": 2,
       "hospitals_count": 2
@@ -527,14 +527,14 @@
       "lat": 28.4425,
       "lon": 77.0722,
       "population": 60000,
-      "aqi": 71.0,
+      "aqi": 68.0,
       "aqi_stale": false,
       "aqi_as_of": null,
       "firms_detections": 0,
       "photo_severity": 0.0,
       "photo_count": 0,
       "photo_type": "none",
-      "hotspot_score": 0.071,
+      "hotspot_score": 0.068,
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 14,
       "sparkline_30d": [
@@ -567,7 +567,7 @@
         146.2,
         98.8,
         60.5,
-        74.2
+        72.6
       ],
       "schools_count": 4,
       "hospitals_count": 2
@@ -619,7 +619,7 @@
         94.2,
         49.1,
         37.5,
-        43.8
+        45.0
       ],
       "schools_count": 1,
       "hospitals_count": 13
