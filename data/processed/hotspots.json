@@ -18,7 +18,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 10,
       "sparkline_30d": [
-        132.8,
         80.6,
         57.6,
         143.2,
@@ -47,7 +46,8 @@
         101.8,
         134.8,
         145.0,
-        94.7
+        94.7,
+        83.0
       ],
       "schools_count": 2,
       "hospitals_count": 1
@@ -68,9 +68,8 @@
       "photo_type": "none",
       "hotspot_score": 0.054,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 2,
+      "recurrence_poor_days": 1,
       "sparkline_30d": [
-        727.4,
         266.0,
         117.8,
         88.4,
@@ -99,7 +98,8 @@
         54.8,
         54.8,
         72.3,
-        55.2
+        55.2,
+        54.0
       ],
       "schools_count": 6,
       "hospitals_count": 5
@@ -122,7 +122,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 2,
       "sparkline_30d": [
-        132.8,
         80.6,
         57.6,
         98.5,
@@ -151,7 +150,8 @@
         53.2,
         82.1,
         108.5,
-        74.1
+        74.1,
+        63.0
       ],
       "schools_count": 7,
       "hospitals_count": 9
@@ -174,7 +174,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        132.8,
         80.6,
         57.6,
         101.2,
@@ -203,7 +202,8 @@
         57.6,
         81.6,
         100.2,
-        57.5
+        57.5,
+        49.5
       ],
       "schools_count": 2,
       "hospitals_count": 0
@@ -224,9 +224,8 @@
       "photo_type": "none",
       "hotspot_score": 0.058,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 1,
+      "recurrence_poor_days": 0,
       "sparkline_30d": [
-        266.0,
         117.8,
         88.4,
         118.8,
@@ -255,7 +254,8 @@
         70.7,
         67.5,
         100.5,
-        64.4
+        64.4,
+        58.0
       ],
       "schools_count": 2,
       "hospitals_count": 3
@@ -278,7 +278,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 1,
       "sparkline_30d": [
-        132.8,
         80.6,
         57.6,
         136.8,
@@ -307,7 +306,8 @@
         71.6,
         135.2,
         149.7,
-        85.1
+        85.1,
+        79.5
       ],
       "schools_count": 15,
       "hospitals_count": 9
@@ -328,9 +328,8 @@
       "photo_type": "none",
       "hotspot_score": 0.05,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 1,
+      "recurrence_poor_days": 0,
       "sparkline_30d": [
-        266.0,
         117.8,
         88.4,
         115.2,
@@ -359,7 +358,8 @@
         57.9,
         67.2,
         82.5,
-        51.4
+        51.4,
+        50.0
       ],
       "schools_count": 3,
       "hospitals_count": 1
@@ -380,9 +380,8 @@
       "photo_type": "none",
       "hotspot_score": 0.102,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 5,
+      "recurrence_poor_days": 4,
       "sparkline_30d": [
-        292.5,
         418.9,
         132.8,
         80.6,
@@ -411,7 +410,8 @@
         168.0,
         216.9,
         192.2,
-        113.6
+        113.6,
+        101.5
       ],
       "schools_count": 7,
       "hospitals_count": 7
@@ -434,7 +434,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        132.8,
         80.6,
         57.6,
         94.8,
@@ -463,7 +462,8 @@
         58.8,
         91.8,
         96.7,
-        65.4
+        65.4,
+        60.5
       ],
       "schools_count": 13,
       "hospitals_count": 10
@@ -486,7 +486,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 1,
       "sparkline_30d": [
-        132.8,
         80.6,
         57.6,
         90.8,
@@ -515,7 +514,8 @@
         52.7,
         68.5,
         73.3,
-        47.2
+        47.2,
+        43.0
       ],
       "schools_count": 2,
       "hospitals_count": 2
@@ -536,9 +536,8 @@
       "photo_type": "none",
       "hotspot_score": 0.075,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 9,
+      "recurrence_poor_days": 8,
       "sparkline_30d": [
-        210.1,
         196.5,
         395.1,
         727.4,
@@ -567,7 +566,8 @@
         94.2,
         106.0,
         57.5,
-        77.9
+        77.9,
+        75.5
       ],
       "schools_count": 4,
       "hospitals_count": 2
@@ -590,7 +590,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 1,
       "sparkline_30d": [
-        66.8,
         48.0,
         40.3,
         117.8,
@@ -619,7 +618,8 @@
         55.4,
         84.5,
         95.0,
-        41.3
+        41.3,
+        37.5
       ],
       "schools_count": 1,
       "hospitals_count": 13
