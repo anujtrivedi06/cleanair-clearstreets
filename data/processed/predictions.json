@@ -1,50 +1,50 @@
 {
   "anand_vihar": {
-    "predicted_aqi_24h": 158.3,
-    "history_points": 225
-  },
-  "rk_puram": {
-    "predicted_aqi_24h": 57.2,
-    "history_points": 221
-  },
-  "punjabi_bagh": {
-    "predicted_aqi_24h": 62.6,
-    "history_points": 222
-  },
-  "ito": {
-    "predicted_aqi_24h": 58.7,
+    "predicted_aqi_24h": 145.7,
     "history_points": 226
   },
-  "dwarka": {
-    "predicted_aqi_24h": 35.6,
-    "history_points": 219
-  },
-  "rohini": {
-    "predicted_aqi_24h": 81.9,
-    "history_points": 225
-  },
-  "okhla": {
-    "predicted_aqi_24h": 48.4,
-    "history_points": 224
-  },
-  "wazirpur": {
-    "predicted_aqi_24h": 126.4,
-    "history_points": 206
-  },
-  "vivek_vihar": {
-    "predicted_aqi_24h": 63.0,
+  "rk_puram": {
+    "predicted_aqi_24h": 32.8,
     "history_points": 222
   },
+  "punjabi_bagh": {
+    "predicted_aqi_24h": 59.7,
+    "history_points": 223
+  },
+  "ito": {
+    "predicted_aqi_24h": 52.7,
+    "history_points": 227
+  },
+  "dwarka": {
+    "predicted_aqi_24h": 67.1,
+    "history_points": 220
+  },
+  "rohini": {
+    "predicted_aqi_24h": 84.6,
+    "history_points": 226
+  },
+  "okhla": {
+    "predicted_aqi_24h": 35.7,
+    "history_points": 225
+  },
+  "wazirpur": {
+    "predicted_aqi_24h": 115.0,
+    "history_points": 207
+  },
+  "vivek_vihar": {
+    "predicted_aqi_24h": 53.5,
+    "history_points": 223
+  },
   "noida_sec62": {
-    "predicted_aqi_24h": 50.6,
-    "history_points": 224
+    "predicted_aqi_24h": 52.9,
+    "history_points": 225
   },
   "gurugram_sec51": {
-    "predicted_aqi_24h": 112.3,
-    "history_points": 192
+    "predicted_aqi_24h": 94.5,
+    "history_points": 193
   },
   "ghaziabad_sanjay_nagar": {
-    "predicted_aqi_24h": 60.7,
-    "history_points": 220
+    "predicted_aqi_24h": 79.0,
+    "history_points": 221
   }
 }
