@@ -16,9 +16,8 @@
       "photo_type": "none",
       "hotspot_score": 0.205,
       "recurrence_days_observed": 30,
-      "recurrence_poor_days": 7,
+      "recurrence_poor_days": 8,
       "sparkline_30d": [
-        87.5,
         108.7,
         165.9,
         101.8,
@@ -47,11 +46,12 @@
         219.3,
         222.9,
         124.0,
-        177.8
+        177.8,
+        205.0
       ],
       "schools_count": 2,
       "hospitals_count": 1,
-      "predicted_aqi_24h": 154.4,
+      "predicted_aqi_24h": 196.7,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
@@ -74,7 +74,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        41.5,
         46.8,
         50.4,
         53.8,
@@ -103,11 +102,12 @@
         108.4,
         106.9,
         74.0,
-        93.9
+        93.9,
+        85.5
       ],
       "schools_count": 6,
       "hospitals_count": 5,
-      "predicted_aqi_24h": 17.9,
+      "predicted_aqi_24h": 43.6,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
@@ -130,7 +130,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        61.1,
         62.0,
         63.8,
         71.0,
@@ -159,11 +158,12 @@
         94.5,
         91.7,
         56.2,
-        86.9
+        86.9,
+        81.5
       ],
       "schools_count": 7,
       "hospitals_count": 9,
-      "predicted_aqi_24h": 52.7,
+      "predicted_aqi_24h": 77.1,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
@@ -186,7 +186,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        53.5,
         57.4,
         60.6,
         67.3,
@@ -215,11 +214,12 @@
         74.3,
         82.3,
         81.1,
-        72.1
+        72.1,
+        72.0
       ],
       "schools_count": 2,
       "hospitals_count": 0,
-      "predicted_aqi_24h": 50.3,
+      "predicted_aqi_24h": 73.5,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
@@ -242,7 +242,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        49.3,
         70.2,
         103.9,
         70.7,
@@ -271,11 +270,12 @@
         93.7,
         112.0,
         61.8,
-        86.1
+        86.1,
+        90.5
       ],
       "schools_count": 2,
       "hospitals_count": 3,
-      "predicted_aqi_24h": 31.8,
+      "predicted_aqi_24h": 43.1,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
@@ -298,7 +298,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        73.0,
         89.2,
         90.9,
         71.6,
@@ -327,11 +326,12 @@
         109.3,
         104.4,
         80.5,
-        104.4
+        104.4,
+        100.0
       ],
       "schools_count": 15,
       "hospitals_count": 9,
-      "predicted_aqi_24h": 82.7,
+      "predicted_aqi_24h": 102.9,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
@@ -354,7 +354,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        52.0,
         57.5,
         73.0,
         57.9,
@@ -383,11 +382,12 @@
         82.9,
         94.2,
         54.8,
-        77.5
+        77.5,
+        78.0
       ],
       "schools_count": 3,
       "hospitals_count": 1,
-      "predicted_aqi_24h": -5.4,
+      "predicted_aqi_24h": 72.7,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
@@ -410,7 +410,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 1,
       "sparkline_30d": [
-        137.6,
         145.5,
         170.1,
         182.0,
@@ -439,11 +438,12 @@
         133.4,
         144.2,
         108.0,
-        134.4
+        134.4,
+        141.5
       ],
       "schools_count": 7,
       "hospitals_count": 7,
-      "predicted_aqi_24h": 119.7,
+      "predicted_aqi_24h": 144.1,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
@@ -466,7 +466,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        58.8,
         59.8,
         76.3,
         80.6,
@@ -495,11 +494,12 @@
         102.3,
         100.2,
         52.8,
-        71.0
+        71.0,
+        90.5
       ],
       "schools_count": 13,
       "hospitals_count": 10,
-      "predicted_aqi_24h": 62.0,
+      "predicted_aqi_24h": 87.4,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
@@ -522,7 +522,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        48.7,
         73.7,
         91.8,
         52.7,
@@ -551,11 +550,12 @@
         89.7,
         86.1,
         66.0,
-        68.8
+        68.8,
+        73.0
       ],
       "schools_count": 2,
       "hospitals_count": 2,
-      "predicted_aqi_24h": 52.4,
+      "predicted_aqi_24h": 62.1,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
@@ -578,7 +578,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        146.2,
         98.8,
         60.5,
         72.6,
@@ -607,11 +606,12 @@
         96.6,
         116.4,
         73.0,
-        101.0
+        101.0,
+        94.5
       ],
       "schools_count": 4,
       "hospitals_count": 2,
-      "predicted_aqi_24h": 79.2,
+      "predicted_aqi_24h": 67.0,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
@@ -634,7 +634,6 @@
       "recurrence_days_observed": 30,
       "recurrence_poor_days": 0,
       "sparkline_30d": [
-        45.0,
         45.2,
         44.5,
         69.5,
@@ -663,11 +662,12 @@
         74.0,
         95.2,
         30.2,
-        37.2
+        37.2,
+        43.0
       ],
       "schools_count": 1,
       "hospitals_count": 13,
-      "predicted_aqi_24h": 39.4,
+      "predicted_aqi_24h": 33.2,
       "ai_briefing": null,
       "ai_briefing_hi": null,
       "ai_briefing_source": null
