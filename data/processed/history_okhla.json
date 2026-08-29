@@ -2229,5 +2229,12 @@
     "wind_speed": 12.1,
     "humidity": 78,
     "source": "cpcb_live"
+  },
+  {
+    "timestamp": "2026-08-29T22:58:04.973733+00:00",
+    "aqi": 87.5,
+    "wind_speed": 6.1,
+    "humidity": 77,
+    "source": "cpcb_live"
   }
 ]
